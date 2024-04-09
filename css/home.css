@@ -31,6 +31,14 @@
   background: url(../svg/saveWgrey.svg);
 }
 
+.tick-icon {
+  background: url(../svg/check-markW.svg);
+}
+
+.cross-icon {
+  background: url(../svg/cancelW.svg);
+}
+
 * {
   margin: 0;
   padding: 0;

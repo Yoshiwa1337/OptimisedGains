@@ -26,6 +26,15 @@ body {
   background-color: #333;
   border-radius: 10px;
 }
+.signup .form-error {
+  color: red;
+}
+.signup .form-success {
+  color: green;
+}
+.signup .input-error {
+  box-shadow: 0 0 5px red;
+}
 .signup label {
   transform: normal;
 }

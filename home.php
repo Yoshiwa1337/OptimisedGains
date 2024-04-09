@@ -39,7 +39,7 @@
             </div>
             <div class="image">
                 <!-- Image or illustration placeholder -->
-                <img src="../og/img/atgsplitsquat.png" alt="">
+                <img src="../OptimisedGains/img/atgsplitsquat.png" alt="">
 
             </div>
         </div>
@@ -110,7 +110,7 @@
                 </ul>
             </div>
         </div>
-        <a href="#" class="join-now-btn">JOIN NOW!</a>
+        <a href="../OptimisedGains/log-signup.php" class="join-now-btn">JOIN NOW!</a>
     </div>
 
     <!-- Additional content and footer -->
