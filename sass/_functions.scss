@@ -1,0 +1,29 @@
+@mixin griddimension($num1,$num2,$num3,$num4){
+    display: grid;
+    grid-row: $num1 / $num2;
+    grid-column: $num3 / $num4;
+}
+
+@mixin flexbox($direction,$justify){
+    display:flex;
+    flex-direction:$direction;
+    justify-content: $justify;
+}
+
+@mixin box($num){
+    width:$num;
+    height:$num;
+}
+
+@mixin dimensions($width,$height){
+    width:$width;
+    height:$height;
+}
+
+@mixin alignment($rowstructure,$columnstructure,$rowitem,$columnitem,$textitem){
+    align-content:$rowstructure;
+    justify-content:$columnstructure;
+    align-items:$rowitem;
+    justify-items:$columnitem;
+    text-align: $textitem;
+}

@@ -1,0 +1,45 @@
+@import "_variables";
+@import "_functions";
+
+body{
+    background-color: #1a1a1a; //Dark background for entire body
+    color: #f0f0f0; //Light text colour for contrast
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #1a1a1a;
+}
+
+.sidebar{
+    background-color: #333;
+    width: 200px;
+    padding: 20px;
+    float: left;
+}
+
+.main-content{
+    margin-left: 220px; //Sidebar width + padding
+    padding: 20px;
+    background-color: #333;
+}
+
+.featured{
+    float: right;
+    width: 200px;
+    padding: 20px;
+    background-color: #333;
+}
+
+.post{
+    margin-bottom: 30px;
+}
+
+.post-title{
+    font-size: 24px;
+    margin-bottom: 10px;
+}

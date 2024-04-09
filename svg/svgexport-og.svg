@@ -1,0 +1,13 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="350" height="105">
+        <svg>
+            <rect width="350px" height="105px">
+        </rect></svg>
+        <svg>
+            <circle cx="50" cy="50" r="40" stroke="#008000" stroke-width="7px" fill="none">
+        </circle></svg>
+        <text fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.88976px" x="27" y="70" font-size="60px">G</text>
+        <text fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.88976px" x="100" y="55" font-size="70px">O</text>
+        <text fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.88976px" x="150" y="55" font-size="50px">ptimized</text>
+        <text fill="#008000" stroke="#008000" stroke-width="1.88976px" x="100" y="95" font-size="70px">G</text>
+        <text fill="#FFFFFF" stroke="#FFFFFF" stroke-width="1.88976px" x="150" y="95" font-size="50px">ains</text>
+    </svg>

@@ -1,0 +1,107 @@
+@import "_icons.scss";
+@import "_variables";
+@import "_functions";
+
+
+body{
+    background-color: #1a1a1a; //Dark background for entire body
+    color: #f0f0f0; //Light text colour for contrast
+    margin: 0;
+    padding: 0;
+}
+
+//Search bar
+.searchbar{
+    width: 100%;
+    height: 50px;
+    padding-left: 50px;
+}
+
+//Gallery styling
+.gallery{
+    @include dimensions(100%,auto);
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    align-items: center;
+
+    //Exercise box styling
+    .box{
+        @include dimensions(350px,275px); //Dimensions for the box
+        @include flexbox(column,none);
+        box-shadow: 0 4px 8px rgba(122,251,103,0.277);
+        border-radius: 10px;
+        margin: 20px;
+        background-color: #333; //Grey background for the box
+        align-items: center;
+        color: white;
+
+        //Colour for headings in exercise boxes
+        h2{
+            color: #a4c639;
+        }
+
+        //Sizing for icons
+        .icon{
+            @include box(40px);
+            font-size: 40px;
+        }
+
+        //Video
+        video{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        //info/description
+        .info{
+            display: grid;
+            height: 50px;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
+            @include alignment(none,center,center,none,center);
+        }
+
+
+    }
+
+
+}
+
+//Responsive gallery
+@media screen and (max-width:1650px){
+    .gallery{
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width:1570px){
+    .gallery{
+        display: grid;
+        grid-template-columns: 3fr 3fr 3fr;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width:1180px){
+    .gallery{
+        display: grid;
+        grid-template-columns: 3fr 3fr;
+        place-items: center;
+    }
+}
+
+@media screen and (max-width:800px){
+    .gallery{
+        display: grid;
+        grid-template-columns: 3fr;
+        place-items: center;
+    }
+}
+
+
+
+
+
+

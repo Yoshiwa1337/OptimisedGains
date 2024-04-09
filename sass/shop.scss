@@ -1,0 +1,114 @@
+@import "_variables";
+@import "_functions";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #1a1a1a; //Dark background for entire body
+    color: #f0f0f0; //Light text colour for contrast
+    margin: 0;
+    padding: 0;
+}
+
+.gallery{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 75% 25%;
+    align-items: center;
+
+    .shop{
+        @include dimensions(100%,auto);
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        align-items: center;
+    }
+
+    .box{
+        @include dimensions(350px,275px);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(255,255,255,0.277);
+        border-radius: 10px;
+        margin: 2.5px;
+        background-color: black;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        .icon{
+            @include box(40px);
+            font-size: 24px;
+        }
+
+        img{
+            @include dimensions(100%,200px);
+            object-fit: cover;
+        }
+
+        .info{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+    .recommended{
+        @include flexbox(column,space-evenly);
+        @include box(100%);
+
+        .row{
+            @include dimensions(400px,80px);
+            color: white;
+            box-shadow: 0 4px 8px rgba(255,255,255,0.277);
+            border-radius: 10px;
+            background-color: black;
+
+            .info{
+                @include dimensions(400px,80px);
+            }
+
+            img{
+                @include box(70px);
+                position: absolute;
+                padding-left: 5px;
+                padding-top: 10px;
+            }
+
+            h3{
+                position: relative;
+                padding-left: 90px;
+            }
+
+            p{
+                position: relative;
+                padding-left: 90px;
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+
+}
+
+
