@@ -1,0 +1,41 @@
+@import "_variables";
+@import "_functions";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1a1a1a; //Dark background for entire body
+    color: #f0f0f0; //Light text colour for contrast
+    margin: 0;
+    padding: 0;
+}
+
+.signup{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    transform: scale(2);
+    width: 200px;
+
+    label{
+        transform: normal;
+    }
+
+    button{
+        width: 100%;
+        background: radial-gradient(rgba(0,255,0,0.5), rgba(0,255,0,1));
+    }
+
+    .cancelbtn{
+        background: radial-gradient(rgba(255,0,0,0.3), rgba(255,0,0,1));
+    }
+}
