@@ -22,6 +22,9 @@ body {
   padding: 10px;
   transform: scale(2);
   width: 200px;
+  height: 200px;
+  background-color: #333;
+  border-radius: 10px;
 }
 .signup label {
   transform: normal;
@@ -29,6 +32,7 @@ body {
 .signup button {
   width: 100%;
   background: radial-gradient(rgba(0, 255, 0, 0.5), rgb(0, 255, 0));
+  border-radius: 10px;
 }
 .signup .cancelbtn {
   background: radial-gradient(rgba(255, 0, 0, 0.3), rgb(255, 0, 0));
