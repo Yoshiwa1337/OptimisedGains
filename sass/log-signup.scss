@@ -12,6 +12,7 @@ body{
     color: #f0f0f0; //Light text colour for contrast
     margin: 0;
     padding: 0;
+    font-size: 1rem;
 }
 
 .signup{
@@ -19,15 +20,34 @@ body{
     flex-direction: column;
     position: absolute;
     top: 45%;
-    left: 45%;
+    left: 25%;
     color: white;
     border: 1px solid black;
     padding: 10px;
-    transform: scale(2);
-    width: 200px;
-    height: 200px;
+    // transform: scale(2);
     background-color: #333;
     border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+
+    .form-row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 10px;
+
+        label{
+            width: 90px;
+            height: 40px;
+        }
+
+        input{
+            border-radius: 5px;
+            border-style: none;
+            width: 70%;
+        }
+
+    }
 
     .form-error{
         color: red;
