@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
         else{
             console.log("Error");
         }
+        form.submit();
     })
 
     email.addEventListener('input', () => {

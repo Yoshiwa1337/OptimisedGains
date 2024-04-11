@@ -62,7 +62,7 @@
     <?php include 'navbar.php' ?>
 
     <div class="signup">
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" id="mainForm">
+        <form action="../OptimisedGains/account.php" method="post" id="mainForm" name="mainForm">
             <h1>Login/Signup</h1>
             <div class="form-row">
                 <label for="email">Email</label>
@@ -84,7 +84,7 @@
             <!-- note: add code showing criteria for password ? if it doesnt involve js -->
 
             <!-- <input type="submit" value="signup"> -->
-            <button type="submit" name="submit" id="submit" class="signupbtn">Sign up</button>
+            <button type="submit" name="btn-submit" id="btn-submit" class="signupbtn">Sign up</button>
             <p class="form-message"></p>
             <!-- <button type="button" class="cancelbtn">Cancel</button> -->
 
