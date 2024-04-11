@@ -35,23 +35,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
-        $(document).ready(function(){
-            $("form").submit(function(event){
-                event.preventDefault();
-                var email = $("#style-email").val();
-                var password = $("#style-password").val();
-                var passConfirm = $("#style-passConfirm").val();
-                var submit = $("#style-submit").val();
-                $(".form-message").load("../OptimisedGains/backend/uservalidation.php", {
-                    email: email,
-                    password: password,
-                    passConfirm: passConfirm,
-                    submit: submit,
-                });
+        // $(document).ready(function(){
+        //     $("form").submit(function(event){
+        //         event.preventDefault();
+        //         var email = $("#style-email").val();
+        //         var password = $("#style-password").val();
+        //         var passConfirm = $("#style-passConfirm").val();
+        //         var submit = $("#style-submit").val();
+        //         $(".form-message").load("../OptimisedGains/backend/uservalidation.php", {
+        //             email: email,
+        //             password: password,
+        //             passConfirm: passConfirm,
+        //             submit: submit,
+        //         });
 
-            });
+        //     });
 
-        });
+        // });
 
     </script>
 
@@ -66,25 +66,25 @@
             <h1>Login/Signup</h1>
             <div class="form-row">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="style-email" placeholder="Enter Email">
+                <input type="email" name="email" id="email" placeholder="Enter Email">
                 <i class="icon"></i>
             </div>
 
             <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="style-password" placeholder="Enter Password">
+                <input type="password" name="password" id="password" placeholder="Enter Password">
                 <i class="icon"></i>
             </div>
 
             <div class="form-row">
                 <label for="password-rpt">Repeat Password</label>
-                <input type="password" name="passConfrm" id="style-passConfirm" placeholder="Confirm Password">
+                <input type="password" name="passConfrm" id="passConfirm" placeholder="Confirm Password">
                 <i class="icon"></i>
             </div>
             <!-- note: add code showing criteria for password ? if it doesnt involve js -->
 
             <!-- <input type="submit" value="signup"> -->
-            <button type="submit" name="submit" id="style-submit" class="signupbtn">Sign up</button>
+            <button type="submit" name="submit" id="submit" class="signupbtn">Sign up</button>
             <p class="form-message"></p>
             <!-- <button type="button" class="cancelbtn">Cancel</button> -->
 
@@ -93,6 +93,7 @@
         
 
     </div>
+    <script src="../OptimisedGains/js/log-signup.js"></script>
    
 </body>
 </html>

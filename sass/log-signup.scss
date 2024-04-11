@@ -1,5 +1,6 @@
 @import "_variables";
 @import "_functions";
+@import "_icons";
 
 *{
     margin: 0;
@@ -35,6 +36,10 @@ body{
     .form-row{
         @include flexbox(row,space-around);
         margin-bottom: 10px;
+
+        i{
+            @include box(40px);
+        }
 
         label{
             width: 90px;

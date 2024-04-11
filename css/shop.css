@@ -1,3 +1,43 @@
+.gallery-icon {
+  background: url(../svg/galleryW.svg);
+}
+
+.community-icon {
+  background: url(../svg/chatW.svg);
+}
+
+.service-icon {
+  background: url(../svg/muscularW.svg);
+}
+
+.account-icon {
+  background: url(../svg/userW.svg);
+}
+
+.menu-icon {
+  background: url(../svg/menuW.svg);
+}
+
+.shop-icon {
+  background: url(../svg/shopping-cartW.svg);
+}
+
+.star-icon {
+  background: url(../svg/starWgrey.svg);
+}
+
+.save-icon {
+  background: url(../svg/saveWgrey.svg);
+}
+
+.tick-icon {
+  background: url(../svg/check-markWgrey.svg);
+}
+
+.cross-icon {
+  background: url(../svg/cancelWgrey.svg);
+}
+
 * {
   margin: 0;
   padding: 0;
