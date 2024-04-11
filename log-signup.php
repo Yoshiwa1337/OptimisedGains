@@ -72,13 +72,13 @@
 
             <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter Password">
+                <input type="password" name="password" id="password" placeholder="Enter Password" class="pass">
                 <i class="icon"></i>
             </div>
 
             <div class="form-row">
                 <label for="password-rpt">Repeat Password</label>
-                <input type="password" name="passConfrm" id="passConfirm" placeholder="Confirm Password">
+                <input type="password" name="passConfrm" id="passConfirm" placeholder="Confirm Password" class="pass">
                 <i class="icon"></i>
             </div>
             <!-- note: add code showing criteria for password ? if it doesnt involve js -->

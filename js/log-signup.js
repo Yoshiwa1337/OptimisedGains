@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     password.addEventListener('input', () => {
         validateField(password, password.value.trim().length >= 8, 'Password must be at least 8 characters');
+        validateField(passConfirm, passConfirm.value.trim() == password.value.trim(), 'Passwords must match');
     });
 
     passConfirm.addEventListener('input', () => {
