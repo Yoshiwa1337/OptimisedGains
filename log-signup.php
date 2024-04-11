@@ -62,7 +62,8 @@
     <?php include 'navbar.php' ?>
 
     <div class="signup">
-        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post">
+        <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" id="mainForm">
+            <h1>Login/Signup</h1>
             <div class="form-row">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="style-email" placeholder="Enter Email">

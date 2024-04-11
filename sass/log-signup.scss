@@ -28,6 +28,10 @@ body{
     width: 80%;
     max-width: 600px;
 
+    h1{
+        text-align: center;
+    }
+
     .form-row{
         @include flexbox(row,space-around);
         margin-bottom: 10px;
