@@ -77,7 +77,7 @@
             </div>
 
             <div class="form-row">
-                <label for="password-rpt">Repeat Password</label>
+                <label for="passConfirm">Repeat Password</label>
                 <input type="password" name="passConfrm" id="passConfirm" placeholder="Confirm Password" class="pass">
                 <i class="icon"></i>
             </div>
