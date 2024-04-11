@@ -1,24 +1,24 @@
 <?php
     // $emailPattern=;
-    $passPattern="/^[a-zA-Z0-9\_]{3,10}$/";
-    if(isset($_POST['submit'])){
-        $email = $_POST['email'];
-        $password = $_POST['password'];
-        $passCnfrm = $_POST['passCnfrm'];
+    // $passPattern="/^[a-zA-Z0-9\_]{3,10}$/";
+    // if(isset($_POST['submit'])){
+    //     $email = $_POST['email'];
+    //     $password = $_POST['password'];
+    //     $passCnfrm = $_POST['passCnfrm'];
         
-        if(preg_match($passPattern,$name,$array)){
-            print_r($array);
-        }
-        else{
-            echo "Invalid password";
-        }
+    //     if(preg_match($passPattern,$name,$array)){
+    //         print_r($array);
+    //     }
+    //     else{
+    //         echo "Invalid password";
+    //     }
 
-        if($password == $passCnfrm){
+    //     if($password == $passCnfrm){
 
-        }
+    //     }
 
 
-    }
+    // }
 
 
 ?>

@@ -26,16 +26,14 @@ body {
 }
 
 .landingp1{
+    @include flexbox(column,none);
     color: #f0f0f0; /* Light grey text for readability */
     padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
     align-items: center; /* Center content */
     text-align: center; /* Center text */
 
     .content{
-        display: flex;
-        justify-content: space-around;
+        @include flexbox(row,space-around);
         align-items: center;
         gap: 20px; /* Space between text, hook, and image */
         flex-wrap: wrap;
@@ -95,17 +93,16 @@ body {
 }
 
 .content{
-    display: flex;
-    justify-content: space-between;
+    @include flexbox(row,space-between);
+    // display: flex;
+    // justify-content: space-between;
     align-items: center;
 }
 
 .text{
+    @include flexbox(column,center);
     flex: 1;
     align-items: center;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     color:#a4c639;
 
     p{
@@ -127,8 +124,7 @@ body {
 
 .landingp3{
     .services{
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(row,space-between);
     }
 
     .service{
@@ -220,8 +216,7 @@ body {
 
 
 .service-table {
-    display: flex;
-    justify-content: space-around;
+    @include flexbox(row,space-around);
     flex-wrap: wrap;
     gap: 20px;
     margin-bottom: 20px;

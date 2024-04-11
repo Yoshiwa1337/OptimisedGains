@@ -61,15 +61,17 @@ body {
 }
 
 .landingp1 {
-  color: #f0f0f0; /* Light grey text for readability */
-  padding: 40px 20px;
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  color: #f0f0f0; /* Light grey text for readability */
+  padding: 40px 20px;
   align-items: center; /* Center content */
   text-align: center; /* Center text */
 }
 .landingp1 .content {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   align-items: center;
   gap: 20px; /* Space between text, hook, and image */
@@ -115,16 +117,17 @@ body {
 
 .content {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   flex: 1;
   align-items: center;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   color: #a4c639;
 }
 .text p {
@@ -145,6 +148,7 @@ body {
 
 .landingp3 .services {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 .landingp3 .service {
@@ -219,6 +223,7 @@ body {
 
 .service-table {
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 20px;

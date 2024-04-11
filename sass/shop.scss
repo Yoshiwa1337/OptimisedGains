@@ -16,8 +16,7 @@ body{
 }
 
 .gallery{
-    width: 100%;
-    height: auto;
+    @include dimensions(100%,auto);
     border: 1px solid black;
     display: grid;
     grid-template-columns: 75% 25%;
@@ -31,15 +30,13 @@ body{
     }
 
     .box{
+        @include flexbox(column,center);
         @include dimensions(350px,275px);
-        display: flex;
-        flex-direction: column;
         box-shadow: 0 4px 8px rgba(255,255,255,0.277);
         border-radius: 10px;
         margin: 2.5px;
         background-color: black;
         align-items: center;
-        justify-content: center;
         color: white;
 
         .icon{

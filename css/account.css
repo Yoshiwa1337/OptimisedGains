@@ -9,27 +9,4 @@ body {
   color: #f0f0f0;
   margin: 0;
   padding: 0;
-}
-
-.signup {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 45%;
-  left: 45%;
-  color: white;
-  border: 1px solid black;
-  padding: 10px;
-  transform: scale(2);
-  width: 200px;
-}
-.signup label {
-  transform: normal;
-}
-.signup button {
-  width: 100%;
-  background: radial-gradient(rgba(0, 255, 0, 0.5), rgb(0, 255, 0));
-}
-.signup .cancelbtn {
-  background: radial-gradient(rgba(255, 0, 0, 0.3), rgb(255, 0, 0));
 }/*# sourceMappingURL=account.css.map */

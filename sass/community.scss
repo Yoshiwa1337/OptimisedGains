@@ -9,8 +9,7 @@ body{
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
+    @include flexbox(row,space-between);
     padding: 20px;
     background-color: #1a1a1a;
 }
