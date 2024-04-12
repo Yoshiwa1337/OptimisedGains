@@ -13,11 +13,13 @@ document.addEventListener('DOMContentLoaded', function(){
         if(checkInputs()){
             const message = this.querySelector('.form-message');
             message.textContent = 'You have successfully logged in';
+
+            localStorage.setItem("auth", 1);
+            form.submit();
         }
         else{
             console.log("Error");
         }
-        form.submit();
     })
 
     email.addEventListener('input', () => {
