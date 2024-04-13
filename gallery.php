@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
     <script>
         $(document).ready(function(){
@@ -37,7 +38,7 @@
     <div class="content">
         <div class="search-bar">
             <div class="bar">
-                <input type="text" name="search" placeholder="Search">
+                <input type="text" name="search" id="exercises" placeholder="Search">
 
             </div>
             <button class="search-icon"></button>
@@ -191,6 +192,8 @@
 
 
     </div>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="../OptimisedGains/js/autocomplete.js"></script>
    
 </body>
 </html>

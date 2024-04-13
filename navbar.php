@@ -21,7 +21,7 @@
                 </li>
                 
                 
-                <li class="main" id="m4"><a href="../OptimisedGains/log-signup.php"><i class="account-icon icon"></i>Sign up/Login</a></li>
+                <li class="main" id="m4"><a href="../OptimisedGains/signup.php"><i class="account-icon icon"></i>Sign up/Login</a></li>
                 <li class="main" id="m5"><a href="../OptimisedGains/shop.php"><i class="shop-icon icon"></i>Shop</a></li>
             </ul>
 
