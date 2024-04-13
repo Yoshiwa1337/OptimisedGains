@@ -38,6 +38,10 @@
   background: url(../svg/cancelWgrey.svg);
 }
 
+.search-icon {
+  background: url(../svg/loupeWgrey.svg);
+}
+
 body {
   background-color: #1a1a1a;
   color: #f0f0f0;
@@ -45,20 +49,50 @@ body {
   padding: 0;
 }
 
-.searchbar {
-  width: 100%;
-  height: 50px;
-  padding-left: 50px;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
-
-.gallery {
+.content .search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: none;
+  height: 50px;
+  background-color: #1a1a1a;
+}
+.content .search-bar .bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 300px;
+  height: 50px;
+  border-radius: 40px 0 0 40px;
+  background-color: #1a1a1a;
+  border: 1px solid white;
+}
+.content .search-bar .bar input {
+  background-color: #1a1a1a;
+  border: none;
+  color: white;
+  width: 255px;
+}
+.content .search-bar button {
+  width: 50px;
+  height: 50px;
+  left: 300px;
+  border-radius: 0 40px 40px 0;
+  border: 1px solid white;
+}
+.content .gallery {
   width: 100%;
   height: auto;
   display: grid;
   grid-template-columns: 2fr 2fr 2fr 2fr;
   align-items: center;
 }
-.gallery .box {
+.content .gallery .box {
   width: 350px;
   height: 275px;
   display: flex;
@@ -71,20 +105,20 @@ body {
   align-items: center;
   color: white;
 }
-.gallery .box h2 {
+.content .gallery .box h2 {
   color: #a4c639;
 }
-.gallery .box .icon {
+.content .gallery .box .icon {
   width: 40px;
   height: 40px;
   font-size: 40px;
 }
-.gallery .box video {
+.content .gallery .box video {
   width: 100%;
   height: 200px;
   object-fit: cover;
 }
-.gallery .box .info {
+.content .gallery .box .info {
   display: grid;
   height: 50px;
   grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;

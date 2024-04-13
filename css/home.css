@@ -39,6 +39,10 @@
   background: url(../svg/cancelWgrey.svg);
 }
 
+.search-icon {
+  background: url(../svg/loupeWgrey.svg);
+}
+
 * {
   margin: 0;
   padding: 0;
