@@ -51,7 +51,7 @@ body {
   font-size: 1rem;
 }
 
-.signup {
+.login {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -66,45 +66,45 @@ body {
   width: 80%;
   max-width: 600px;
 }
-.signup h1 {
+.login h1 {
   text-align: center;
 }
-.signup .form-row {
+.login .form-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-bottom: 10px;
 }
-.signup .form-row i {
+.login .form-row i {
   width: 40px;
   height: 40px;
 }
-.signup .form-row label {
+.login .form-row label {
   width: 90px;
   height: 40px;
 }
-.signup .form-row input {
+.login .form-row input {
   border-radius: 5px;
   border-style: none;
   width: 70%;
 }
-.signup .form-error {
+.login .form-error {
   color: red;
 }
-.signup .form-success {
+.login .form-success {
   color: green;
 }
-.signup .input-error {
+.login .input-error {
   box-shadow: 0 0 5px red;
 }
-.signup label {
+.login label {
   transform: normal;
 }
-.signup button {
+.login button {
   width: 100%;
   background: radial-gradient(rgba(0, 255, 0, 0.5), rgb(0, 255, 0));
   border-radius: 10px;
 }
-.signup .cancelbtn {
+.login .cancelbtn {
   background: radial-gradient(rgba(255, 0, 0, 0.3), rgb(255, 0, 0));
-}/*# sourceMappingURL=log-signup.css.map */
+}/*# sourceMappingURL=login.css.map */

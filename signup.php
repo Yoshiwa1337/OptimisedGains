@@ -63,7 +63,7 @@
 
     <div class="signup">
         <form action="../OptimisedGains/account.php" method="post" id="mainForm" name="mainForm">
-            <h1>Login/Signup</h1>
+            <h1>Signup</h1>
             <div class="form-row">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" placeholder="Enter Email">
@@ -85,6 +85,9 @@
 
             <!-- <input type="submit" value="signup"> -->
             <button type="submit" name="btn-submit" id="btn-submit" class="signupbtn">Sign up</button>
+            <p>Already have an account ?</p>
+            <a href="../OptimisedGains/login.php">Login</a>
+
             <p class="form-message"></p>
             <!-- <button type="button" class="cancelbtn">Cancel</button> -->
 
