@@ -1,14 +1,13 @@
-
 <?php
-    $existingExercises = array("Strength", "Hypertrophy", "Flexibility", "Endurance");
+    $existingExercises = array("Bench Press", "Squat", "Deadlift", "ATG split squat");
 
     if (isset($_POST['suggestion'])){
-        $name = $_POST['suggestion'];
+        $search = $_POST['suggestion'];
 
-        if (!empty($name)){
-            foreach ($existingNames as $existingName){
-                if (strpos($existingName, $name) !== false){
-                    echo $existingName;
+        if (!empty($search)){
+            foreach ($existingExercises as $existingExercise){
+                if (strpos($existingExercise, $search) !== false){
+                    echo $existingExercise;
                     echo "<br>";
 
                 }
