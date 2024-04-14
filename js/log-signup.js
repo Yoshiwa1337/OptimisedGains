@@ -4,7 +4,24 @@ document.addEventListener('DOMContentLoaded', function(){
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const passConfirm = document.getElementById('passConfirm');
+    const rows = document.querySelectorAll('.form-row');
     // const form = document.getElementById('mainForm');
+
+    // if(rows.classList.contains('error')){
+    //     form.addEventListener('submit', function (e) {
+    //         e.preventDefault();
+    //         checkInputs();
+    //     });
+    // }
+    // else{
+    //     form.addEventListener('submit', function (e) {
+    //         // e.preventDefault();
+    //         checkInputs();
+    //     });
+
+
+    // }
+
 
     
     form.addEventListener('submit', function (e) {

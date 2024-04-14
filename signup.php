@@ -53,6 +53,12 @@
 
         // });
 
+        // $(document).ready(function()){
+        //     $("form").submit(function(event)){
+        //         load("../OptimisedGains/backend/signup.inc.php");
+        //     };
+        // };
+
     </script>
 
 
@@ -62,7 +68,7 @@
     <?php include_once 'navbar.php' ?>
 
     <div class="signup">
-        <form action="../OptimisedGains/backend/signup.inc.php" method="post" id="mainForm" name="mainForm">
+        <form action="../OptimisedGains/backend/signup.inc.php" method="post" id="mainForm" name="mainForm" novalidate>
             <h1>Signup</h1>
             <div class="form-row">
                 <label for="email">Email</label>
@@ -93,6 +99,7 @@
 
 
         </form>
+        <!-- <button type="submit" name="btn-submit" id="btn-submit" class="signupbtn">Sign up</button> -->
         
 
     </div>
