@@ -100,10 +100,28 @@
 
         </form>
         <!-- <button type="submit" name="btn-submit" id="btn-submit" class="signupbtn">Sign up</button> -->
-        
+
+        <?php
+            if(isset($_GET['error'])){
+                if($_GET['error'] == "stmtfailed"){
+                    echo "<p>Something went wrong, try again !</p>";
+
+                }
+                if($_GET['error'] == "existingemail"){
+                    echo "<p>Email is already in use !</p>";
+                }
+                else if($_GET['error'] == "none"){
+                    echo "<p>You have successfully signed up !</p>";
+                }
+            }
+
+        ?>
+            
 
     </div>
     <script src="../OptimisedGains/js/log-signup.js"></script>
+
+
    
 </body>
 </html>
