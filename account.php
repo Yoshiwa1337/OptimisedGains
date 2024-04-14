@@ -13,7 +13,7 @@
 
     <div class="container">
         <h1 class="text-center">Welcome to the accounts page!</h1>
-        <p class="text-center"><a href="#" class="logout">Log out</a></p>
+        <p class="text-center"><a href="../OptimisedGains/backend/logout.inc.php" class="logout">Log out</a></p>
 
     </div>
     <script src="../OptimisedGains/js/auth.js"></script>
