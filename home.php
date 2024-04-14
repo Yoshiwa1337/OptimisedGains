@@ -107,7 +107,6 @@
                         echo "<blockquote class='review-text'>";
                         echo $row['message'];
                         echo "</blockquote>";
-                        // echo "<br>";
                         echo "<footer class='reviewer-name'>";
                         echo $row['author'];
                         echo "</footer>";
@@ -121,7 +120,7 @@
             ?>
             
         </div>
-        <button>Show more comments</button>
+        <button>Show more</button>
             
     </div>
 
