@@ -16,8 +16,6 @@
         <p class="text-center"><a href="../OptimisedGains/backend/logout.inc.php" class="logout">Log out</a></p>
 
     </div>
-    <script src="../OptimisedGains/js/auth.js"></script>
-    <script src="../OptimisedGains/init.js"></script>
 
 
    
