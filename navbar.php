@@ -1,5 +1,8 @@
 <?php
-    echo '
+    session_start();
+
+?>
+    
         <nav class="navbar">
 
             <div class="logo">
@@ -19,13 +22,19 @@
                         <li class="service"><a href="../OptimisedGains/lifeplan.php">Lifestyle</a></li>
                     </ul>
                 </li>
+                <?php
+                    if(isset($_SESSION["userid"])){
+                        echo "<li class='main' id='m4'><a href='../OptimisedGains/account.php'><i class ='account-icon icon'></i>Account</a></li>";
+                    }
+                    else{
+                        echo "<li class='main' id='m4'><a href='../OptimisedGains/signup.php'><i class='account-icon icon'></i>Sign up/Login</a></li>";
+                    }
+
+                ?>
                 
                 
-                <li class="main" id="m4"><a href="../OptimisedGains/signup.php"><i class="account-icon icon"></i>Sign up/Login</a></li>
                 <li class="main" id="m5"><a href="../OptimisedGains/shop.php"><i class="shop-icon icon"></i>Shop</a></li>
             </ul>
 
         </nav>
     
-    '
-?>

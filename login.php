@@ -94,10 +94,21 @@
 
 
         </form>
+
+        <?php
+            if(isset($_GET['error'])){
+                if($_GET['error'] == "wronglogin"){
+                    echo "<p>Incorrect login information !</p>";
+                }
+            }
+
+        ?>
+            
+
         
 
     </div>
-    <script src="../OptimisedGains/js/log-signup.js"></script>
+    <script src="../OptimisedGains/js/login.js"></script>
    
 </body>
 </html>

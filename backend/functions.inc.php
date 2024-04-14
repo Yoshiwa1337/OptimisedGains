@@ -1,5 +1,5 @@
 <?php
-    function emailExists($conn, $email){
+    function uidExists($conn, $email){
         $sql = "SELECT * FROM users WHERE users_email = ?;";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -43,6 +43,31 @@
         exit();
 
 
+    }
+
+    function loginUser($conn, $email, $password){
+        $uidExists = uidExists($conn, $email);
+
+        if($uidExists === false){
+            header("location: ../login.php?error=wronglogin");
+            exit();
+        }
+
+        $pwdHashed = $uidExists["users_pwd"];
+        $checkPassword = password_verify($password, $pwdHashed);
+
+        if($checkPassword === false){
+            header("location: ../login.php?error=wronglogin");
+            exit();
+
+        }
+        else if($checkPassword === true){
+            session_start();
+            $_SESSION["userid"] = $uidExists["users_id"];
+            $_SESSION["useremail"] = $uidExists["users_email"];
+            header("location: ../home.php");
+            exit();
+        }
     }
 
 

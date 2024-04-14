@@ -17,7 +17,7 @@
         require_once 'functions.inc.php';
 
 
-        if(emailExists($conn, $email) !== false){
+        if(uidExists($conn, $email) !== false){
             header("location: ../signup.php?error=existingemail");
             exit();
         }

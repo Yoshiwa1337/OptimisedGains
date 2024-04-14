@@ -119,7 +119,7 @@
             
 
     </div>
-    <script src="../OptimisedGains/js/log-signup.js"></script>
+    <script src="../OptimisedGains/js/signup.js"></script>
 
 
    
