@@ -6,6 +6,4 @@
 
     $conn = mysqli_connect($serverName, $userName, $password, $dbName)
 
-
-
 ?>
