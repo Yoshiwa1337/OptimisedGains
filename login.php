@@ -60,7 +60,7 @@
 
 </head>
 <body>
-    <?php include 'navbar.php' ?>
+    <?php include_once 'navbar.php' ?>
 
     <div class="login">
         <form action="../OptimisedGains/account.php" method="post" id="mainForm" name="mainForm">

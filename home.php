@@ -39,7 +39,7 @@
 </style>
 <body>
 
-    <?php include 'navbar.php' ?>
+    <?php include_once 'navbar.php' ?>
 
     <!-- landing page -->
     <div class="text">

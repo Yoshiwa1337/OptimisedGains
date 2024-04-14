@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <?php include 'navbar.php' ?>
+    <?php include_once 'navbar.php' ?>
 
     <!-- Gallery -->
     <div class="gallery">

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../OptimisedGains/css/nutriplan.css">
 </head>
 <body>
-    <?php include 'navbar.php' ?>
+    <?php include_once 'navbar.php' ?>
 
     <div class="plan-container">
         <h1>Nutrition Plan</h1>

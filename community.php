@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php include 'navbar.php' ?>
+    <?php include_once 'navbar.php' ?>
 
 
     <div class="sidebar">
