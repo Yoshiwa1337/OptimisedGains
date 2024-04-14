@@ -14,8 +14,9 @@ document.addEventListener('DOMContentLoaded', function(){
             const message = this.querySelector('.form-message');
             message.textContent = 'You have successfully logged in';
 
-            localStorage.setItem("auth", 1);
+            // localStorage.setItem("auth", 1);
             form.submit();
+            console.log("hello");
         }
         else{
             console.log("Error");

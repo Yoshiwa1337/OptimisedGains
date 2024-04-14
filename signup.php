@@ -62,7 +62,7 @@
     <?php include_once 'navbar.php' ?>
 
     <div class="signup">
-        <form action="../OptimisedGains/account.php" method="post" id="mainForm" name="mainForm">
+        <form action="../OptimisedGains/backend/signup.inc.php" method="post" id="mainForm" name="mainForm">
             <h1>Signup</h1>
             <div class="form-row">
                 <label for="email">Email</label>
