@@ -10,24 +10,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
 
-    <script>
-        $(document).ready(function(){
-
-            $("input").keyup(function(){
-                var search = $("input").val();
-                $.post("backend/suggestions.php", {
-                    suggestion: search
-                }, function(data, status){
-                    $("#suggest").html(data)
-
-                });
-            });
-
-        });
-        
-
-    </script>
-
 </head>
 <body>
     
@@ -43,7 +25,6 @@
             </div>
             <button class="search-icon"></button>
         </div>
-        <p id="suggest"></p>
 
         <div class="gallery">
             <div class="exercise-box1 box">
