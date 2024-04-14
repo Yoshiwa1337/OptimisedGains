@@ -10,18 +10,7 @@ document.addEventListener('DOMContentLoaded', function(){
     form.addEventListener('submit', function (e) {
         e.preventDefault();
         checkInputs();
-        if(checkInputs()){
-            const message = this.querySelector('.form-message');
-            message.textContent = 'You have successfully logged in';
-
-            // localStorage.setItem("auth", 1);
-            form.submit();
-            console.log("hello");
-        }
-        else{
-            console.log("Error");
-        }
-    })
+    });
 
     email.addEventListener('input', () => {
         validateField(email, isEmail(email.value.trim()), 'Not a valid email');
@@ -38,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     function checkInputs(){
         let isValid = true;
+        let count = 0;
         validateField(email, isEmail(email.value.trim()), 'Not a valid email');
         validateField(password, password.value.trim().length >= 8, 'Password must be at least 8 characters');
         validateField(passConfirm, passConfirm.value.trim() == password.value.trim() && passConfirm.value.trim().length != 0, 'Passwords must match');
@@ -45,8 +35,25 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelectorAll('.form-row').forEach((control) => {
             if(control.classList.contains('error')){
                 isValid = false;
+                count++;
             }
         });
+
+        if(count != 0){
+            // localStorage.setItem("auth", 1);
+            // form.submit();
+            // console.log("nay");
+            const message = document.querySelector('.form-message');
+            message.textContent = 'Unable to submit, check username or password';
+        }
+        else{
+            // localStorage.setItem("auth", 1);
+            const message = document.querySelector('.form-message');
+            message.textContent = 'You have successfully logged in';
+            form.submit();
+            // console.log("yay");
+        }
+
 
         return isValid;
 
@@ -65,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const formRow = input.parentElement;
         const icon = formRow.querySelector("i");
         icon.className = 'tick-icon';
+        formRow.className = 'form-row'; //Resets the name so that checkInputs loop doesnt tag the error
     }
 
     function setError(input, message){
@@ -72,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const icon = formRow.querySelector("i");
         icon.className = 'cross-icon';
         input.placeholder = message;
+        formRow.className = 'form-row error'; //Allows the checkInputs loop to catch the error
         // errorMsg.textContent = message;
 
     }
