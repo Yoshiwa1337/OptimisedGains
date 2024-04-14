@@ -175,6 +175,22 @@ body {
   padding-bottom: 10px;
   border-bottom: 2px solid green; /* Green underline for the heading */
 }
+.reviews-container button {
+  background-color: #a4c639; /* Green background for buttons */
+  color: #1a1a1a; /* Dark text for contrast */
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+.reviews-container button:hover {
+  background-color: #8ebf27; /* Slightly lighter green on hover */
+}
 
 .review {
   background-color: #333; /* Slightly lighter grey for the review box */

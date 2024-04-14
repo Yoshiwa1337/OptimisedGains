@@ -1,3 +1,9 @@
+<?php
+    include '../OptimisedGains/backend/connection.php';
+
+?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,7 +14,26 @@
     <link rel="stylesheet" href="../OptimisedGains/css/home.css">
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
+
+
+<script>
+    //Jquery code
+    $(document).ready(function(){
+        var reviewCount = 1;
+        $("button").click(function(){
+            reviewCount += 1;
+            $("#more").load("../OptimisedGains/backend/review.php", {
+                reviewNewCount: reviewCount,
+
+
+            });
+
+        });
+    });
+</script>
+
 <style>
 
 </style>
@@ -71,7 +96,32 @@
         </div>
         
         <!-- You can continue to add more review blocks here -->
-        
+
+        <div id="more">
+            <?php 
+                $sql = "SELECT * FROM comments LIMIT 1";
+                $result = mysqli_query($conn, $sql);
+                if (mysqli_num_rows($result) > 0){
+                    while ($row = mysqli_fetch_assoc($result)){
+                        echo "<div class='review'>";
+                        echo "<blockquote class='review-text'>";
+                        echo $row['message'];
+                        echo "</blockquote>";
+                        echo "<footer class='reviewer-name'>";
+                        echo $row['author'];
+                        echo "</footer>";
+                        echo "</div>";
+                    }
+
+                }
+                else{
+                    echo "There are no comments!";
+                }
+            ?>
+            
+        </div>
+        <button>Show more</button>
+            
     </div>
 
     <!-- Additional content and footer -->
