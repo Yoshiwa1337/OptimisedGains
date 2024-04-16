@@ -26,6 +26,6 @@
 
     }
     else{
-        header("location: ../signup.php");
+        header("location: ../login.php");
     }
 ?>
