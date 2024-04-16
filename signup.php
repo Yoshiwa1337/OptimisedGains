@@ -71,14 +71,20 @@
         <form action="../OptimisedGains/backend/signup.inc.php" method="post" id="mainForm" name="mainForm" novalidate>
             <h1>Signup</h1>
             <div class="form-row">
+                <label for="name">Name</label>
+                <input type="name" name="name" id="name" placeholder="Enter your first name">
+                <i class="icon"></i>
+            </div>
+
+            <div class="form-row">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter Email">
+                <input type="email" name="email" id="email" placeholder="Enter email">
                 <i class="icon"></i>
             </div>
 
             <div class="form-row">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter Password" class="pass">
+                <input type="password" name="password" id="password" placeholder="Enter password" class="pass">
                 <i class="icon"></i>
             </div>
 

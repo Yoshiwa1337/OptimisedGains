@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function(){
 
     const form = document.getElementById('mainForm');
+    const name = document.getElementById('name');
     const email = document.getElementById('email');
     const password = document.getElementById('password');
     const passConfirm = document.getElementById('passConfirm');
@@ -29,6 +30,10 @@ document.addEventListener('DOMContentLoaded', function(){
         checkInputs();
     });
 
+    name.addEventListener('input', () => {
+        validateField(name, isName(name.value.trim()), 'Cannot include numbers' );
+    });
+
     email.addEventListener('input', () => {
         validateField(email, isEmail(email.value.trim()), 'Not a valid email');
     });
@@ -45,6 +50,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function checkInputs(){
         let isValid = true;
         let count = 0;
+        validateField(name, isName(name.value.trim()), 'Cannot include numbers')
         validateField(email, isEmail(email.value.trim()), 'Not a valid email');
         validateField(password, password.value.trim().length >= 8, 'Password must be at least 8 characters');
         validateField(passConfirm, passConfirm.value.trim() == password.value.trim() && passConfirm.value.trim().length != 0, 'Passwords must match');
@@ -102,9 +108,14 @@ document.addEventListener('DOMContentLoaded', function(){
 
     }
 
+    function isName(name){
+        return /^[a-zA-Z]{2,}$/.test(name);
+    }
+
     function isEmail(email) {
         return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email);
     }
+
 
 
 

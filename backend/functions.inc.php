@@ -24,9 +24,31 @@
 
     }
 
+    function nameLong($conn, $name){
+        $length = strlen($name);
+        $stmt = mysqli_stmt_init($conn);
 
-    function createUser($conn, $email, $password){
-        $sql = "INSERT INTO users (users_email, users_pwd) VALUES (?, ?);";
+        if(!mysqli_stmt_prepare($stmt, $sql)){
+            header("location: ../signup.php?error=stmtfailed");
+            exit();
+        }
+
+        // mysqli_stmt_bind_param($stmt, "s", $name);
+        // mysqli_stmt_execute($stmt);
+
+        if($length > 18){
+            $result = false;
+            return $result;
+        }
+
+
+        // mysqli_stmt_close($stmt);
+
+    }
+
+
+    function createUser($conn, $name, $email, $password){
+        $sql = "INSERT INTO users (users_name, users_email, users_pwd) VALUES (?, ?, ?);";
         $stmt = mysqli_stmt_init($conn);
         if(!mysqli_stmt_prepare($stmt, $sql)){
             header("location: ../signup.php?error=stmtfailed");
@@ -35,7 +57,7 @@
 
         $hashedPwd = password_hash($password, PASSWORD_DEFAULT); 
 
-        mysqli_stmt_bind_param($stmt, "ss", $email, $hashedPwd);
+        mysqli_stmt_bind_param($stmt, "sss", $name, $email, $hashedPwd);
         mysqli_stmt_execute($stmt);
 
         mysqli_stmt_close($stmt);

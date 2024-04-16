@@ -9,6 +9,7 @@
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         header("location: ../account.php");
+        $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $passConfirm = $_POST['passComfirm'];
@@ -22,7 +23,12 @@
             exit();
         }
 
-        createUser($conn, $email, $password);
+        if(nameLong($conn, $name) !== false){
+            header("location: ../signup.php?error=nametoolongemail");
+            exit();
+        }
+
+        createUser($conn, $name, $email, $password);
 
     }
     else{
