@@ -72,13 +72,13 @@
             <h1>Signup</h1>
             <div class="form-row">
                 <label for="name">Name</label>
-                <input type="name" name="name" id="name" placeholder="Enter your first name">
+                <input type="text" name="name" id="name" placeholder="Enter your first name">
                 <i class="icon"></i>
             </div>
 
             <div class="form-row">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter email">
+                <input type="text" name="email" id="email" placeholder="Enter email">
                 <i class="icon"></i>
             </div>
 
@@ -113,8 +113,11 @@
                     echo "<p>Something went wrong, try again !</p>";
 
                 }
-                if($_GET['error'] == "existingemail"){
+                else if($_GET['error'] == "existingemail"){
                     echo "<p>Email is already in use !</p>";
+                }
+                else if($_GET['error'] == "nametoolong"){
+                    echo "<p>Name cant be more than 18 characters !</p>";
                 }
                 else if($_GET['error'] == "none"){
                     echo "<p>You have successfully signed up !</p>";

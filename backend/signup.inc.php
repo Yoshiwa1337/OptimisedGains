@@ -8,11 +8,11 @@
     // }
 
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        header("location: ../account.php");
+        // header("location: ../login.php");
         $name = $_POST['name'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $passConfirm = $_POST['passComfirm'];
+        $passConfirm = $_POST['passConfirm'];
 
         require_once 'dbh.inc.php';
         require_once 'functions.inc.php';
@@ -24,14 +24,15 @@
         }
 
         if(nameLong($conn, $name) !== false){
-            header("location: ../signup.php?error=nametoolongemail");
+            header("location: ../signup.php?error=nametoolong");
             exit();
         }
 
         createUser($conn, $name, $email, $password);
 
+        header("location: ../login.php");
     }
     else{
-        header("location: ../login.php");
+        header("location: ../signup.php");
     }
 ?>
