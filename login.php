@@ -100,6 +100,9 @@
                 if($_GET['error'] == "wronglogin"){
                     echo "<p>Incorrect login information !</p>";
                 }
+                if($_GET['error'] == "none"){
+                    echo "<p>Now you can login !</p>";
+                }
             }
 
         ?>
