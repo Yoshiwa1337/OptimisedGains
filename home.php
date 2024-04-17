@@ -22,7 +22,7 @@
     //Jquery code
     $(document).ready(function(){
         var reviewCount = 1;
-        $("button").click(function(){
+        $("#more-btn").click(function(){
             reviewCount += 1;
             $("#more").load("../OptimisedGains/backend/review.php", {
                 reviewNewCount: reviewCount,
@@ -120,7 +120,7 @@
             ?>
             
         </div>
-        <button>Show more</button>
+        <button id="more-btn">Show more</button>
             
     </div>
 

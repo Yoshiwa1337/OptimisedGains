@@ -20,7 +20,7 @@ body {
 }
 
 .icon{
-    @include box(40px);
+    @include box(24px);
     @include flexbox(none,left);
 }
 
@@ -31,11 +31,15 @@ body {
     @include flexbox(none,flex-start);
     background-color: $navbarcolor;
 
+    .menu-icon{
+        display: none;
+    }
+
     .links{
         @include flexbox(none,space-evenly);
         @include dimensions(100%,$navbarheight);
         align-items: center;
-        width: 1600px;
+        // width: 1600px;
         gap: 2rem;
 
         .main{
@@ -50,7 +54,7 @@ body {
     ul{
         list-style: none;
         li{
-            font-size: 30px;
+            font-size: 2.5vh;
 
         }
     }
@@ -87,6 +91,10 @@ body {
 
     a:hover{
         color: $hovercolor;
+    }
+
+    #mobile-view{
+        display: none;
     }
 
 
@@ -131,4 +139,53 @@ body {
     .navbar{
         width: 100%;
     }
+}
+
+@media screen and (max-width:975px){
+    .navbar{
+
+        #desk-view{
+            display: none;
+        }
+        #mobile-view{
+            display: block;
+        }
+    }
+
+}
+
+@media screen and (max-width:800px){
+    .navbar{
+        height: fit-content;
+
+        .menu-icon{
+            @include box(24px);
+            display: block;
+            right: 10px;
+            top: 20px;
+            position: absolute;
+            justify-self: center;
+        }
+        
+        .links{
+            display: none;
+        }
+
+        .show{
+            @include flexbox(column,flex-end);
+            // align-items: flex-end;
+            // position: inherit;
+            padding-top: 350px;
+        }
+
+
+        // .links-show{
+        //     @include flexbox(column,flex-end);
+        //     // align-items: flex-end;
+        //     // position: inherit;
+        //     padding-top: 350px;
+        // }
+
+    }
+
 }
