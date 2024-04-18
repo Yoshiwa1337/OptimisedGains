@@ -81,6 +81,7 @@
             session_start();
             $_SESSION["userid"] = $uidExists["users_id"];
             $_SESSION["useremail"] = $uidExists["users_email"];
+            $userID = $_SESSION["userid"];
             header("location: ../home.php");
             exit();
         }

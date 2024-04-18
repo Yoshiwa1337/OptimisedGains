@@ -82,6 +82,13 @@
             </tr>
 
             <?php
+                
+                $sql2 = "SELECT users_id FROM `usersvids`";
+
+                $result2 = mysqli_query($conn, $sql2);
+
+                $row2 = mysqli_fetch_assoc($result2);
+
                 $sql1 = "SELECT * FROM `usersvids`";
 
                 $result1 = mysqli_query($conn, $sql1);
@@ -94,7 +101,6 @@
                         <td> <?php echo $row['vid_exercise'] ?></td>
                         <td><video src="<?php echo $vid_name ;?>" height="200px" width="300px" controls></video></td>
                     </tr>
-
             <?php }
             ?>
 
