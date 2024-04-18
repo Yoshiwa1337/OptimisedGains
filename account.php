@@ -30,7 +30,7 @@
 
         move_uploaded_file($temp_name,"vidsuser/".$name);
 
-        $video_name = "viduser/".$name;
+        $video_name = "vidsuser/".$name;
         $sql = "INSERT INTO `usersvids`(vid_name, vid_exercise, users_id) VALUES('$video_name', '$exercise', '$userid')";
 
         $result = mysqli_query($conn, $sql);
@@ -93,8 +93,6 @@
                         <td> <?php echo $row['vid_id'] ?></td>
                         <td> <?php echo $row['vid_exercise'] ?></td>
                         <td><video src="<?php echo $vid_name ;?>" height="200px" width="300px" controls></video></td>
-                        <td><video src="../OptimisedGains/viduser/y2mate.is - RDL Progression-Q-f6YDyKHPc-720p-1702046605.mp4" height="200px" width="300px" controls></video></td>
-                        <td><video src="../OptimisedGains/vids/y2mate.is - RDL Progression-Q-f6YDyKHPc-720p-1702046605.mp4" height="200px" width="300px" controls></video></td>
                     </tr>
 
             <?php }
