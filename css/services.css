@@ -40,4 +40,53 @@
 
 .search-icon {
   background: url(../svg/loupeWgrey.svg);
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.plan-container, .main-content {
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-container h1, .main-content h1 {
+  margin-bottom: 10px;
+}
+
+.plan-container p, .main-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.join-now-btn {
+  background-color: #8ebf27;
+  position: absolute;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.join-now-btn:hover {
+  background-color: #2D9CDB;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar ul li {
+    padding: 10px 0;
+  }
 }/*# sourceMappingURL=services.css.map */
