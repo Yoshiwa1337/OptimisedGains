@@ -67,7 +67,7 @@
         <h1 class="text-center">Welcome to the accounts page!</h1>
         <p class="text-center"><a href="../OptimisedGains/backend/logout.inc.php" class="logout">Log out</a></p>
 
-        <form action="../OptimisedGains/<?php $_SERVER['PHP_SELF']  ?>" method="POST" enctype="multipart/form-data">
+        <form action="<?php $_SERVER['PHP_SELF']  ?>" method="POST" enctype="multipart/form-data">
             <input type="file" name="video" id="video">
             <input type="text" name="exercise" id="exercise">
             <input type="submit" name="submit" value="submit">
@@ -92,9 +92,10 @@
                     <tr>
                         <td> <?php echo $row['vid_id'] ?></td>
                         <td> <?php echo $row['vid_exercise'] ?></td>
-                        <td><video src="<?php echo $vid_name ;?>" height="200px" width="300px" controls></td>
+                        <td><video src="<?php echo $vid_name ;?>" height="200px" width="300px" controls></video></td>
+                        <td><video src="../OptimisedGains/viduser/y2mate.is - RDL Progression-Q-f6YDyKHPc-720p-1702046605.mp4" height="200px" width="300px" controls></video></td>
+                        <td><video src="../OptimisedGains/vids/y2mate.is - RDL Progression-Q-f6YDyKHPc-720p-1702046605.mp4" height="200px" width="300px" controls></video></td>
                     </tr>
-                }
 
             <?php }
             ?>
