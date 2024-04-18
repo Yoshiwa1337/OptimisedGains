@@ -58,7 +58,6 @@ body {
 .gallery {
   width: 100%;
   height: auto;
-  border: 1px solid black;
   display: grid;
   grid-template-columns: 75% 25%;
   align-items: center;
@@ -76,16 +75,16 @@ body {
   justify-content: center;
   width: 350px;
   height: 275px;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.277);
+  box-shadow: 0 4px 8px rgba(122, 251, 103, 0.277);
   border-radius: 10px;
-  margin: 2.5px;
-  background-color: black;
+  margin: 20px;
+  background-color: #333;
   align-items: center;
   color: white;
 }
 .gallery .box .icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   font-size: 24px;
 }
 .gallery .box img {
@@ -94,10 +93,18 @@ body {
   object-fit: cover;
 }
 .gallery .box .info {
+  align-content: none;
+  justify-content: center;
+  align-items: center;
+  justify-items: none;
+  text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: flex-end;
-  align-items: center;
+}
+.gallery .box .info a {
+  width: 24px;
+  height: 24px;
 }
 .gallery .recommended {
   display: flex;
@@ -109,10 +116,12 @@ body {
 .gallery .recommended .row {
   width: 400px;
   height: 80px;
-  color: white;
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.277);
+  box-shadow: 0 4px 8px rgba(122, 251, 103, 0.277);
   border-radius: 10px;
-  background-color: black;
+  margin: 20px;
+  background-color: #333;
+  align-items: center;
+  color: white;
 }
 .gallery .recommended .row .info {
   width: 400px;
