@@ -1,4 +1,5 @@
 <?php
+    // error_reporting(0);
     header('Access-Control-Allow-Origin:*');
     header('Content-Type: application/json');
     header('Access-Control-Allow-Method: GET');
@@ -9,8 +10,23 @@
     $requestMethod = $_SERVER['REQUEST_METHOD'];
 
     if($requestMethod == "GET"){
-        $userList = getUserList();
-        echo $userList;
+
+        if($_GET['users_id']){
+            // $user = getUser();
+            // echo $user;
+            $userList = getUserList();
+            echo $userList;
+        }
+        else{
+            // $userList = getUserList();
+            // echo $userList;
+            $user = getUser($_GET['users_id']);
+            echo $user;
+
+        }
+
+
+
 
     }
     else{
