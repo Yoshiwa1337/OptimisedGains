@@ -100,8 +100,6 @@ body {
 
 .content{
     @include flexbox(row,space-between);
-    // display: flex;
-    // justify-content: space-between;
     align-items: center;
 }
 

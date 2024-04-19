@@ -173,18 +173,9 @@ body {
 
         .show{
             @include flexbox(column,flex-end);
-            // align-items: flex-end;
-            // position: inherit;
             padding-top: 350px;
         }
 
-
-        // .links-show{
-        //     @include flexbox(column,flex-end);
-        //     // align-items: flex-end;
-        //     // position: inherit;
-        //     padding-top: 350px;
-        // }
 
     }
 

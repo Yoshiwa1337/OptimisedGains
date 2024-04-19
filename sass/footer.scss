@@ -14,9 +14,7 @@ html{
 }
 
 body{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flexbox(column,space-between);
     height: 100vh;
     font-size: 1.6rem;
 }
@@ -62,8 +60,7 @@ i{
     }
 
     .footer-list{
-        display: flex;
-        flex-direction: column;
+        @include flexbox(column,none);
         gap: 2rem;
     }
 
@@ -88,8 +85,7 @@ i{
     }
 
     .footer-bottom{
-        display: flex;
-        justify-content: space-between;
+        @include flexbox(row,space-between);
         gap: 2rem;
         flex-wrap: wrap;
     }
