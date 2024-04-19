@@ -16,67 +16,68 @@ body{
     font-size: 1rem;
 }
 
-.signup{
-    @include flexbox(column,center);
-    position: absolute;
-    top: 45%;
-    left: 25%;
-    color: white;
-    border: 1px solid black;
-    padding: 10px;
-    background-color: #333;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
+.container{
+    @include flexbox(row,center);
 
-    h1{
-        text-align: center;
-    }
+    .signup{
+        @include flexbox(column,center);
+        color: white;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
 
-    .form-row{
-        @include flexbox(row,space-around);
-        margin-bottom: 10px;
+        h1{
+            text-align: center;
+        }
 
-        i{
-            @include box(40px);
+        .form-row{
+            @include flexbox(row,space-around);
+            margin-bottom: 10px;
+
+            i{
+                @include box(40px);
+            }
+
+            label{
+                width: 90px;
+                height: 40px;
+            }
+
+            input{
+                border-radius: 5px;
+                border-style: none;
+                width: 70%;
+            }
+
+        }
+
+        .form-error{
+            color: red;
+        }
+
+        .form-success{
+            color: green;
+        }
+
+        .input-error{
+            box-shadow: 0 0 5px red;
         }
 
         label{
-            width: 90px;
-            height: 40px;
+            transform: normal;
         }
 
-        input{
-            border-radius: 5px;
-            border-style: none;
-            width: 70%;
+        button{
+            width: 100%;
+            background: radial-gradient(rgba(0,255,0,0.5), rgba(0,255,0,1));
+            border-radius: 10px;
         }
 
-    }
-
-    .form-error{
-        color: red;
-    }
-
-    .form-success{
-        color: green;
-    }
-
-    .input-error{
-        box-shadow: 0 0 5px red;
-    }
-
-    label{
-        transform: normal;
-    }
-
-    button{
-        width: 100%;
-        background: radial-gradient(rgba(0,255,0,0.5), rgba(0,255,0,1));
-        border-radius: 10px;
-    }
-
-    .cancelbtn{
-        background: radial-gradient(rgba(255,0,0,0.3), rgba(255,0,0,1));
+        .cancelbtn{
+            background: radial-gradient(rgba(255,0,0,0.3), rgba(255,0,0,1));
+        }
     }
 }

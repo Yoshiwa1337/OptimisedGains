@@ -14,7 +14,7 @@
 
     <div class="container">
         <h1 class="text-center">Welcome to the accounts page!</h1>
-        <p class="text-center"><a href="../OptimisedGains/backend/logout.inc.php" class="logout">Log out</a></p>
+        <a href="../OptimisedGains/backend/logout.inc.php" class="logout" id="join-now-btn">Log out</a>
 
     </div>
 

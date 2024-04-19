@@ -1,4 +1,6 @@
 <footer class="footer">
+    <div class="block"></div>
+
         <div class="footer-container">
             <div class="footer-top">
                 <div>
