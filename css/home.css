@@ -64,6 +64,10 @@ body {
   padding: 0;
 }
 
+.block {
+  display: none;
+}
+
 .landingp1 {
   display: flex;
   flex-direction: column;
