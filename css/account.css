@@ -62,8 +62,8 @@ body {
   align-items: center;
 }
 .container #join-now-btn {
-  background-color: #a4c639; /* Green background for buttons */
-  color: #1a1a1a; /* Dark text for contrast */
+  background-color: #a4c639;
+  color: #1a1a1a;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
@@ -76,5 +76,5 @@ body {
   max-width: max-content;
 }
 .container #join-now-btn:hover {
-  background-color: #8ebf27; /* Slightly lighter green on hover */
+  background-color: #8ebf27;
 }/*# sourceMappingURL=account.css.map */
