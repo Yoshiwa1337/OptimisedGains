@@ -24,6 +24,17 @@
 
     }
 
+    function insertUserReview($conn, $authorId, $review){
+        $sql = "INSERT INTO reviews (author_id, msg) VALUES (?, ?);";
+        $stmt = mysqli_stmt_init($conn);
+        if(!mysqli_stmt_prepare($stmt, $sql)){
+            header("location: ../signup.php?error=stmtfailed");
+            exit();
+        }
+        
+
+    }
+
     function nameLong($conn, $name){
         $length = strlen($name);
         $result;

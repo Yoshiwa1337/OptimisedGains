@@ -15,6 +15,15 @@
         <h1 class="text-center">Welcome to the accounts page!</h1>
         <p class="text-center"><a href="../OptimisedGains/backend/logout.inc.php" class="logout">Log out</a></p>
 
+        <form action="../OptimisedGains/backend/dbh.inc.php" method="POST">
+            <label for="message">Enter your review</label>
+            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <!-- <input type="message" name="message" id="message"> -->
+            <input type="submit" name="submit" value="submit">
+
+
+        </form>
+
     </div>
 
 
