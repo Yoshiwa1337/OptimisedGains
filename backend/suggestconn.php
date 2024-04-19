@@ -1,12 +1,8 @@
 <?php
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "test";
-
-    $connect = mysqli_connect($host, $username, $password, $database);
+    include 'dbh.inc.php';
+    global $conn;
     $sql = "SELECT * FROM exercises";
-    $results = mysqli_query($connect, $sql);
+    $results = mysqli_query($conn, $sql);
     $json_array = array();
 
     while($data = mysqli_fetch_assoc($results)){
