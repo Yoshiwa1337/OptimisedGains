@@ -6,6 +6,7 @@
     <title>Nutrition Plan - Optimized Gains</title>
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
     <link rel="stylesheet" href="../OptimisedGains/css/nutriplan.css">
+    <link rel="stylesheet" href="../OptimisedGains/css/footer.css">
 </head>
 <body>
     <?php include_once 'navbar.php' ?>
@@ -27,6 +28,7 @@
     </div>
 
     <!-- Additional content and footer -->
+    <?php include_once 'footer.php' ?>
 
 </body>
 </html>

@@ -56,8 +56,8 @@ body {
 }
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 24px;
+  height: 24px;
   display: flex;
   flex-direction: none;
   justify-content: left;
@@ -65,20 +65,22 @@ body {
 
 .navbar {
   width: 100%;
-  height: 105px;
+  height: 70px;
   display: flex;
   flex-direction: none;
   justify-content: flex-start;
   background-color: black;
+}
+.navbar .menu-icon {
+  display: none;
 }
 .navbar .links {
   display: flex;
   flex-direction: none;
   justify-content: space-evenly;
   width: 100%;
-  height: 105px;
+  height: 70px;
   align-items: center;
-  width: 1600px;
   gap: 2rem;
 }
 .navbar .links .main {
@@ -91,7 +93,7 @@ body {
   list-style: none;
 }
 .navbar ul li {
-  font-size: 30px;
+  font-size: 2.5vh;
 }
 .navbar li:hover .dd1 > li {
   display: block;
@@ -125,16 +127,19 @@ body {
 .navbar a:hover {
   color: green;
 }
+.navbar #mobile-view {
+  display: none;
+}
 
 .service {
-  background-color: #333; /* Slightly lighter grey for the service box */
+  background-color: #333;
   padding: 20px;
-  border-radius: 5px; /* Rounded corners for the service box */
-  border-left: 4px solid #a4c639; /* Green accent on the side */
-  flex-basis: calc(33.333% - 20px); /* Subtracting the gap from the flex-basis */
+  border-radius: 5px;
+  border-left: 4px solid #a4c639;
+  flex-basis: calc(33.333% - 20px);
 }
 .service h2 {
-  color: #a4c639; /* Green color for service titles */
+  color: #a4c639;
   margin-bottom: 15px;
 }
 .service ul {
@@ -143,8 +148,8 @@ body {
   text-align: left;
 }
 .service ul li {
-  background-color: #333; /* Darker background for list items */
-  color: #ccc; /* Light grey for list text */
+  background-color: #333;
+  color: #ccc;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 3px;
@@ -153,5 +158,36 @@ body {
 @media (max-width: 1100px) {
   .navbar {
     width: 100%;
+  }
+}
+@media screen and (max-width: 975px) {
+  .navbar #desk-view {
+    display: none;
+  }
+  .navbar #mobile-view {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  .navbar {
+    height: fit-content;
+  }
+  .navbar .menu-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    right: 10px;
+    top: 20px;
+    position: absolute;
+    justify-self: center;
+  }
+  .navbar .links {
+    display: none;
+  }
+  .navbar .show {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-top: 350px;
   }
 }/*# sourceMappingURL=navbar.css.map */

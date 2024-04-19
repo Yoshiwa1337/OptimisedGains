@@ -32,6 +32,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../OptimisedGains/css/login.css">
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
+    <link rel="stylesheet" href="../OptimisedGains/css/footer.css">
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -62,55 +63,60 @@
 <body>
     <?php include_once 'navbar.php' ?>
 
-    <div class="login">
-        <form action="../OptimisedGains/backend/login.inc.php" method="post" id="mainForm" name="mainForm">
-            <h1>Login</h1>
-            <div class="form-row">
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="Enter Email">
-                <i class="icon"></i>
-            </div>
+    <div class="container">
 
-            <div class="form-row">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Enter Password" class="pass">
-                <i class="icon"></i>
-            </div>
+        <div class="login">
+            <form action="../OptimisedGains/backend/login.inc.php" method="post" id="mainForm" name="mainForm">
+                <h1>Login</h1>
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter Email">
+                    <i class="icon"></i>
+                </div>
 
-            <!-- <div class="form-row">
-                <label for="passConfirm">Repeat Password</label>
-                <input type="password" name="passConfrm" id="passConfirm" placeholder="Confirm Password" class="pass">
-                <i class="icon"></i>
-            </div> -->
-            <!-- note: add code showing criteria for password ? if it doesnt involve js -->
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter Password" class="pass">
+                    <i class="icon"></i>
+                </div>
 
-            <!-- <input type="submit" value="signup"> -->
-            <button type="submit" name="btn-submit" id="btn-submit" class="signupbtn">Sign up</button>
-            <p>Dont already have an account ?</p>
-            <a href="../OptimisedGains/signup.php">Signup</a>
+                <!-- <div class="form-row">
+                    <label for="passConfirm">Repeat Password</label>
+                    <input type="password" name="passConfrm" id="passConfirm" placeholder="Confirm Password" class="pass">
+                    <i class="icon"></i>
+                </div> -->
+                <!-- note: add code showing criteria for password ? if it doesnt involve js -->
 
-            <p class="form-message"></p>
-            <!-- <button type="button" class="cancelbtn">Cancel</button> -->
+                <!-- <input type="submit" value="signup"> -->
+                <button type="submit" name="btn-submit" id="btn-submit" class="signupbtn">Sign up</button>
+                <p>Dont already have an account ?</p>
+                <a href="../OptimisedGains/signup.php">Signup</a>
+
+                <p class="form-message"></p>
+                <!-- <button type="button" class="cancelbtn">Cancel</button> -->
 
 
-        </form>
+            </form>
 
-        <?php
-            if(isset($_GET['error'])){
-                if($_GET['error'] == "wronglogin"){
-                    echo "<p>Incorrect login information !</p>";
+            <?php
+                if(isset($_GET['error'])){
+                    if($_GET['error'] == "wronglogin"){
+                        echo "<p>Incorrect login information !</p>";
+                    }
+                    if($_GET['error'] == "none"){
+                        echo "<p>Now you can login !</p>";
+                    }
                 }
-                if($_GET['error'] == "none"){
-                    echo "<p>Now you can login !</p>";
-                }
-            }
 
-        ?>
+            ?>
+                
+
             
 
-        
-
+        </div>
     </div>
+
+    <?php include_once 'footer.php' ?>
     <script src="../OptimisedGains/js/login.js"></script>
    
 </body>

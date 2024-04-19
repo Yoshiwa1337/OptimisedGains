@@ -53,4 +53,22 @@ body {
   color: #f0f0f0;
   margin: 0;
   padding: 0;
+}
+
+#join-now-btn {
+  background-color: #a4c639; /* Green background for buttons */
+  color: #1a1a1a; /* Dark text for contrast */
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#join-now-btn:hover {
+  background-color: #8ebf27; /* Slightly lighter green on hover */
 }/*# sourceMappingURL=account.css.map */

@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../OptimisedGains/css/shop.css">
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
+    <link rel="stylesheet" href="../OptimisedGains/css/footer.css">
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -17,100 +18,89 @@
         <div class="shop">
 
             <div class="shop-box1 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view1.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
-                    <p>Hypertrophy</p>
                 </div>
             </div>
 
             <div class="shop-box2 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view2.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
             </div>
 
             <div class="shop-box3 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view3.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
             </div>
             
             <div class="shop-box4 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view4.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
             </div>
 
             <div class="shop-box5 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view5.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
             </div>
 
             <div class="shop-box6 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view6.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
             </div>
 
             <div class="shop-box7 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view7.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
             </div>
 
             <div class="shop-box8 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view8.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
             </div>
 
             <div class="shop-box9 box">
-                <h3>Heading</h3>
+                <h2>Heading</h2>
                 <img src="../OptimisedGains/img/view9.jpg" alt="">
                 <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
-                    <p>Strength</p>
-                    <p>Hypertrophy</p>
-                </div>
-            </div>
-
-            <div class="shop-box10 box">
-                <h3>Heading</h3>
-                <img src="" alt="">
-                <div class="info">
-                    <i class="fa-regular fa-bookmark"></i>
+                    <a href="#"><i class="save-icon icon"></i></a>
                     <p>Strength</p>
                     <p>Hypertrophy</p>
                 </div>
@@ -120,12 +110,12 @@
 
         <div class="recommended">
             <div class="rec-row1 row">
-                <div class="info">
-                    <img src="../OptimisedGains/img/view1.jpg" alt="">
-                    <h3>Article1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ipsa.</p>
+                <!-- <div class="info"> -->
+                <img src="../OptimisedGains/img/view1.jpg" alt="">
+                <h3>Article1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ipsa.</p>
 
-                </div>
+                <!-- </div> -->
                 
             </div>
 
@@ -180,6 +170,7 @@
         </div>
 
     </div>
+    <?php include_once 'footer.php' ?>
 
 
 

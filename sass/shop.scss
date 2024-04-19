@@ -18,7 +18,6 @@ body{
 
 .gallery{
     @include dimensions(100%,auto);
-    border: 1px solid black;
     display: grid;
     grid-template-columns: 75% 25%;
     align-items: center;
@@ -32,16 +31,16 @@ body{
 
     .box{
         @include flexbox(column,center);
-        @include dimensions(350px,275px);
-        box-shadow: 0 4px 8px rgba(255,255,255,0.277);
+        @include dimensions(350px,275px); //Dimensions for the box
+        box-shadow: 0 4px 8px rgba(122,251,103,0.277);
         border-radius: 10px;
-        margin: 2.5px;
-        background-color: black;
+        margin: 20px;
+        background-color: #333; //Grey background for the box
         align-items: center;
         color: white;
 
         .icon{
-            @include box(40px);
+            @include box(24px);
             font-size: 24px;
         }
 
@@ -51,10 +50,15 @@ body{
         }
 
         .info{
+            @include alignment(none,center,center,none,center);
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
             justify-content: flex-end;
-            align-items: center;
+            // align-items: center;
+
+            a{
+                @include box(24px);
+            }
         }
     }
 
@@ -63,19 +67,24 @@ body{
         @include box(100%);
 
         .row{
-            @include dimensions(400px,80px);
-            color: white;
-            box-shadow: 0 4px 8px rgba(255,255,255,0.277);
+            // @include dimensions(400px,80px);
+            @include dimensions(fit-content,fit-content);
+            box-shadow: 0 4px 8px rgba(122,251,103,0.277);
             border-radius: 10px;
-            background-color: black;
+            margin: 20px;
+            background-color: #333; //Grey background for the box
+            align-items: center;
+            color: white;
 
             .info{
                 @include dimensions(400px,80px);
             }
 
             img{
-                @include box(70px);
+                @include box(60px);
+                border-radius: 10px;
                 position: absolute;
+                object-fit: cover;
                 padding-left: 5px;
                 padding-top: 10px;
             }
@@ -106,6 +115,106 @@ body{
 
 
 
+
+}
+
+@media screen and (max-width:1725px){
+    .gallery{
+
+        .recommended{
+            
+            .row{
+                // @include dimensions(fit-content,fit-content);
+
+                img{
+                    @include box(50px);
+                }
+            }
+        }
+        
+        // .shop{
+        //     grid-template-columns: 2fr 2fr;
+
+        // }
+    }
+
+}
+
+@media screen and (max-width:1585px){
+    .gallery{
+
+        // .recommended{
+            
+        //     .row{
+        //         @include dimensions(200px,40px);
+        //     }
+        // }
+        
+        .shop{
+            grid-template-columns: 2fr 2fr;
+
+        }
+    }
+
+}
+
+@media screen and (max-width:1040px){
+    .gallery{
+
+        
+        .shop{
+            grid-template-columns: 2fr;
+            padding-left: 100px;
+
+        }
+    }
+
+}
+
+@media screen and (max-width:800px){
+    .gallery{
+        grid-template-columns: 60% 40%;
+        .recommended{
+            
+            .row{
+                // @include dimensions(fit-content,fit-content);
+
+                img{
+                    @include box(30px);
+                }
+
+                font-size: 14px;
+            }
+        }
+
+
+
+        
+    }
+
+}
+
+@media screen and (max-width:785px){
+    .gallery{
+        grid-template-columns: 1fr;
+        justify-content: center;
+        .recommended{
+            
+            .row{
+                // @include dimensions(fit-content,fit-content);
+
+                img{
+                    @include box(30px);
+                }
+
+                font-size: 14px;
+            }
+        }
+
+
+
+        
+    }
 
 }
 

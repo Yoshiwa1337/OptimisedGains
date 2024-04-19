@@ -13,6 +13,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../OptimisedGains/css/home.css">
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
+    <link rel="stylesheet" href="../OptimisedGains/css/footer.css">
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
@@ -22,7 +23,7 @@
     //Jquery code
     $(document).ready(function(){
         var reviewCount = 1;
-        $("button").click(function(){
+        $("#more-btn").click(function(){
             reviewCount += 1;
             $("#more").load("../OptimisedGains/backend/review.php", {
                 reviewNewCount: reviewCount,
@@ -120,7 +121,7 @@
             ?>
             
         </div>
-        <button>Show more</button>
+        <button id="more-btn">Show more</button>
             
     </div>
 
@@ -168,6 +169,8 @@
     </section>
 
     <!-- Additional content and footer -->
+    <?php include_once 'footer.php' ?>
+    
 
    
 </body>
