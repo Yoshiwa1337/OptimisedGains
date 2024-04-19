@@ -86,6 +86,15 @@
 
         $query = "SELECT * FROM usersvids";
         $query_run = mysqli_query($conn, $query);
+                $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+
+        foreach ($res as $row) {
+            if (array_key_exists("users_id", $row)) {
+                echo $row["users_id"];
+            } else {
+                echo "users_id does not exist in this row";
+            }
+        }
 
         if($query_run){
 
@@ -140,6 +149,8 @@
             return error422('Userid not found');
         }
 
+
+
         $userId = mysqli_real_escape_string($conn, $userParams['users_id']);
 
         $query = "SELECT * FROM usersvids WHERE users_id='$userId'";
@@ -186,6 +197,21 @@
         }
 
     }
+
+
+    // function array_values_to_string($array){
+    //     $new_array = array();
+    //     foreach($array as $key => $value){
+    //         if(is_array($value)){
+    //             $new_array[$key] = array_values_to_string($value);
+    //         }
+    //         else{
+    //             $new_array[$key] = (string)$value;
+    //         }
+    //     }
+    //     return $new_array;
+
+    // }
 
 
 

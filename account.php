@@ -99,6 +99,7 @@
                     ?>
                     <tr>
                         <td> <?php echo $row['vid_id'] ?></td>
+                        <td> <?php echo $row['users_id'] ?></td>
                         <td> <?php echo $row['vid_exercise'] ?></td>
                         <td><video src="<?php echo $vid_name ;?>" height="200px" width="300px" controls></video></td>
                     </tr>
