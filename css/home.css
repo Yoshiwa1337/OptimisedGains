@@ -58,8 +58,8 @@
 }
 
 body {
-  background-color: #1a1a1a; /* Dark background for the entire body */
-  color: #f0f0f0; /* Light text color for contrast */
+  background-color: #1a1a1a;
+  color: #f0f0f0;
   margin: 0;
   padding: 0;
 }
@@ -72,17 +72,17 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: none;
-  color: #f0f0f0; /* Light grey text for readability */
+  color: #f0f0f0;
   padding: 40px 20px;
-  align-items: center; /* Center content */
-  text-align: center; /* Center text */
+  align-items: center;
+  text-align: center;
 }
 .landingp1 .content {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  gap: 20px; /* Space between text, hook, and image */
+  gap: 20px;
   flex-wrap: wrap;
 }
 .landingp1 .image {
@@ -94,7 +94,7 @@ body {
   padding: 10px;
 }
 .landingp1 h1, .landingp1 h2 {
-  color: #a4c639; /* Green color for headings */
+  color: #a4c639;
   margin-bottom: 15px;
 }
 .landingp1 p, .landingp1 ul li {
@@ -102,25 +102,25 @@ body {
   margin-bottom: 10px;
 }
 .landingp1 .hook {
-  background-color: #333; /* Darker background for the hook */
-  border-left: 4px solid green; /* Green accent on the side */
-  border-radius: 5px; /* Rounded corners for the hook */
+  background-color: #333;
+  border-left: 4px solid green;
+  border-radius: 5px;
   padding: 20px;
 }
 .landingp1 ul {
-  list-style: none; /* Remove default list styling */
+  list-style: none;
   padding: 0;
-  text-align: left; /* Align text to the left within the hook */
+  text-align: left;
 }
 .landingp1 ul li {
-  background-color: #262626; /* Slightly lighter grey for list items */
+  background-color: #262626;
   border-radius: 3px;
   padding: 10px;
 }
 .landingp1 img {
-  max-width: 100%; /* Ensure the image is responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Optionally, round the corners of the image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 .content {
@@ -170,18 +170,18 @@ body {
   width: 80%;
   margin: auto;
   padding: 20px;
-  max-width: 800px; /* Maximum width for the container */
+  max-width: 800px;
 }
 .reviews-container h1 {
-  color: #a4c639; /* Green color for headings */
+  color: #a4c639;
   text-align: center;
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 2px solid green; /* Green underline for the heading */
+  border-bottom: 2px solid green;
 }
 .reviews-container button {
-  background-color: #a4c639; /* Green background for buttons */
-  color: #1a1a1a; /* Dark text for contrast */
+  background-color: #a4c639;
+  color: #1a1a1a;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
@@ -193,21 +193,21 @@ body {
   margin-top: 20px;
 }
 .reviews-container button:hover {
-  background-color: #8ebf27; /* Slightly lighter green on hover */
+  background-color: #8ebf27;
 }
 
 .review {
-  background-color: #333; /* Slightly lighter grey for the review box */
+  background-color: #333;
   padding: 20px;
   margin-bottom: 20px;
-  border-left: 4px solid green; /* Green accent on the side */
-  border-radius: 5px; /* Rounded corners for the review box */
+  border-left: 4px solid green;
+  border-radius: 5px;
 }
 
 .review-text {
   font-size: 16px;
   line-height: 1.6;
-  color: #ccc; /* Light grey for review text */
+  color: #ccc;
   quotes: "“" "”" "‘" "’";
 }
 .review-text ::before {
@@ -229,20 +229,20 @@ body {
   font-weight: bold;
   font-style: italic;
   text-align: right;
-  color: #f0f0f0; /* White color for reviewer's name */
+  color: #f0f0f0;
 }
 
 .services-container {
   width: 80%;
   margin: auto;
   padding: 20px;
-  max-width: 1200px; /* Maximum width for the container */
+  max-width: 1200px;
 }
 .services-container h1 {
-  color: #a4c639; /* Green color for headings */
+  color: #a4c639;
   margin-bottom: 30px;
   padding-bottom: 10px;
-  border-bottom: 2px solid green; /* Green underline for the heading */
+  border-bottom: 2px solid green;
 }
 
 .service-table {
@@ -255,14 +255,14 @@ body {
 }
 
 .service {
-  background-color: #333; /* Slightly lighter grey for the service box */
+  background-color: #333;
   padding: 20px;
-  border-radius: 5px; /* Rounded corners for the service box */
-  border-left: 4px solid green; /* Green accent on the side */
-  flex-basis: calc(33.333% - 20px); /* Subtracting the gap from the flex-basis */
+  border-radius: 5px;
+  border-left: 4px solid green;
+  flex-basis: calc(33.333% - 20px);
 }
 .service h2 {
-  color: #a4c639; /* Green color for service titles */
+  color: #a4c639;
   margin-bottom: 15px;
 }
 .service ul {
@@ -271,16 +271,16 @@ body {
   text-align: left;
 }
 .service ul li {
-  background-color: #333; /* Darker background for list items */
-  color: #ccc; /* Light grey for list text */
+  background-color: #333;
+  color: #ccc;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 3px;
 }
 
 .join-now-btn {
-  background-color: #a4c639; /* Green background for buttons */
-  color: #1a1a1a; /* Dark text for contrast */
+  background-color: #a4c639;
+  color: #1a1a1a;
   padding: 10px 20px;
   text-decoration: none;
   border: none;
@@ -293,15 +293,15 @@ body {
 }
 
 .join-now-btn:hover {
-  background-color: #8ebf27; /* Slightly lighter green on hover */
+  background-color: #8ebf27;
 }
 
 @media (max-width: 1024px) {
   .landingp1 .content, .landingp1 .image {
-    flex-direction: column; /* Stack elements on smaller screens */
+    flex-direction: column;
   }
   .landingp1 .text, .landingp1 .hook, .landingp1 .image {
-    flex-basis: 100%; /* Full width for each section */
+    flex-basis: 100%;
   }
 }
 @media (max-width: 768px) {
@@ -323,7 +323,7 @@ body {
 }
 @media (max-width: 1024px) {
   .service {
-    flex-basis: calc(50% - 20px); /* Adjusting for a two-column layout */
+    flex-basis: calc(50% - 20px);
   }
 }
 @media (max-width: 768px) {
@@ -332,6 +332,6 @@ body {
     padding: 15px;
   }
   .service {
-    flex-basis: 100%; /* Full width for mobile */
+    flex-basis: 100%;
   }
 }/*# sourceMappingURL=home.css.map */

@@ -21,27 +21,27 @@
 
 //Pages
 body {
-    background-color: #1a1a1a; /* Dark background for the entire body */
-    color: #f0f0f0; /* Light text color for contrast */
+    background-color: #1a1a1a; //Dark background for the entire body
+    color: #f0f0f0; //Light text color for contrast
     margin: 0;
     padding: 0;
 }
 
 .block{
-    display: none;
+    display: none; //Removing footer block for this page specifically
 }
 
 .landingp1{
     @include flexbox(column,none);
-    color: #f0f0f0; /* Light grey text for readability */
+    color: #f0f0f0; //Light grey text for readability
     padding: 40px 20px;
-    align-items: center; /* Center content */
-    text-align: center; /* Center text */
+    align-items: center; //Center content
+    text-align: center; //Center text
 
     .content{
         @include flexbox(row,space-around);
         align-items: center;
-        gap: 20px; /* Space between text, hook, and image */
+        gap: 20px; // Space between text, hook, and image
         flex-wrap: wrap;
     }
 
@@ -56,7 +56,7 @@ body {
     }
 
     h1, h2{
-        color: #a4c639; /* Green color for headings */
+        color: #a4c639; // Green color for headings 
         margin-bottom: 15px;
     }
 
@@ -66,28 +66,28 @@ body {
     }
 
     .hook{
-        background-color: #333; /* Darker background for the hook */
-        border-left: 4px solid green; /* Green accent on the side */
-        border-radius: 5px; /* Rounded corners for the hook */
+        background-color: #333; //Darker background for the hook
+        border-left: 4px solid green; // Green accent on the side
+        border-radius: 5px; //Rounded corners for the hook
         padding: 20px;
     }
 
     ul{
-        list-style: none; /* Remove default list styling */
+        list-style: none; //Remove default list styling
         padding: 0;
-        text-align: left; /* Align text to the left within the hook */
+        text-align: left; //Align text to the left within the hook
     }
 
     ul li{
-        background-color: #262626; /* Slightly lighter grey for list items */
+        background-color: #262626; // Slightly lighter grey for list items 
         border-radius: 3px;
         padding: 10px;
     }
 
     img{
-        max-width: 100%; /* Ensure the image is responsive */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 5px; /* Optionally, round the corners of the image */
+        max-width: 100%; //Ensure the image is responsive
+        height: auto; //Maintain aspect ratio
+        border-radius: 5px; // Optionally, round the corners of the image
     }
 
 
@@ -149,20 +149,20 @@ body {
     width: 80%;
     margin: auto;
     padding: 20px;
-    max-width: 800px; /* Maximum width for the container */
+    max-width: 800px; //Maximum width for the container
 
     h1{
-        color: #a4c639; /* Green color for headings */
+        color: #a4c639; //Green color for headings
         text-align: center;
         margin-bottom: 30px;
         padding-bottom: 10px;
-        border-bottom: 2px solid green; /* Green underline for the heading */
+        border-bottom: 2px solid green; // Green underline for the heading
 
     }
 
     button{
-        background-color: #a4c639; /* Green background for buttons */
-        color: #1a1a1a; /* Dark text for contrast */
+        background-color: #a4c639; //Green background for buttons
+        color: #1a1a1a; //Dark text for contrast
         padding: 10px 20px;
         text-decoration: none;
         border: none;
@@ -175,7 +175,7 @@ body {
     }
 
     button:hover {
-        background-color: #8ebf27; /* Slightly lighter green on hover */
+        background-color: #8ebf27; //Slightly lighter green on hover
     }
 
 
@@ -184,11 +184,11 @@ body {
 
 
 .review {
-    background-color: #333; /* Slightly lighter grey for the review box */
+    background-color: #333; // Slightly lighter grey for the review box
     padding: 20px;
     margin-bottom: 20px;
-    border-left: 4px solid green; /* Green accent on the side */
-    border-radius: 5px; /* Rounded corners for the review box */
+    border-left: 4px solid green; //Green accent on the side
+    border-radius: 5px; //Rounded corners for the review box
 }
 
 
@@ -196,7 +196,8 @@ body {
 .review-text {
     font-size: 16px;
     line-height: 1.6;
-    color: #ccc; /* Light grey for review text */
+    color: #ccc; // Light grey for review text
+
     quotes: "“" "”" "‘" "’";
 
     ::before{
@@ -221,7 +222,7 @@ body {
     font-weight: bold;
     font-style: italic;
     text-align: right;
-    color: #f0f0f0; /* White color for reviewer's name */
+    color: #f0f0f0; //White color for reviewer's name
 }
 
 
@@ -229,13 +230,13 @@ body {
     width: 80%;
     margin: auto;
     padding: 20px;
-    max-width: 1200px; /* Maximum width for the container */
+    max-width: 1200px; //Maximum width for the container
 
     h1{
-        color: #a4c639; /* Green color for headings */
+        color: #a4c639; //Green color for headings
         margin-bottom: 30px;
         padding-bottom: 10px;
-        border-bottom: 2px solid green; /* Green underline for the heading */
+        border-bottom: 2px solid green; //Green underline for the heading
     }
 
 
@@ -252,14 +253,14 @@ body {
 
 
 .service {
-    background-color: #333; /* Slightly lighter grey for the service box */
+    background-color: #333; //Slightly lighter grey for the service box
     padding: 20px;
-    border-radius: 5px; /* Rounded corners for the service box */
-    border-left: 4px solid green; /* Green accent on the side */
-    flex-basis: calc(33.333% - 20px); /* Subtracting the gap from the flex-basis */
+    border-radius: 5px; // Rounded corners for the service box
+    border-left: 4px solid green; // Green accent on the side
+    flex-basis: calc(33.333% - 20px); // Subtracting the gap from the flex-basis
 
     h2{
-        color: #a4c639; /* Green color for service titles */
+        color: #a4c639; //Green color for service titles
         margin-bottom: 15px;
 
     }
@@ -269,8 +270,8 @@ body {
         padding: 0;
         text-align: left;
         li{
-            background-color: #333; /* Darker background for list items */
-            color: #ccc; /* Light grey for list text */
+            background-color: #333; //Darker background for list items
+            color: #ccc; //Light grey for list text
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 3px;
@@ -284,8 +285,8 @@ body {
 
 
 .join-now-btn {
-    background-color: #a4c639; /* Green background for buttons */
-    color: #1a1a1a; /* Dark text for contrast */
+    background-color: #a4c639; //Green background for buttons
+    color: #1a1a1a; //Dark text for contrast
     padding: 10px 20px;
     text-decoration: none;
     border: none;
@@ -298,7 +299,7 @@ body {
 }
 
 .join-now-btn:hover {
-    background-color: #8ebf27; /* Slightly lighter green on hover */
+    background-color: #8ebf27; //Slightly lighter green on hover
 }
 
 
@@ -310,11 +311,11 @@ body {
 
 @media (max-width: 1024px) {
     .landingp1 .content, .landingp1 .image {
-        flex-direction: column; /* Stack elements on smaller screens */
+        flex-direction: column; //Stack elements on smaller screens
     }
 
     .landingp1 .text, .landingp1 .hook, .landingp1 .image {
-        flex-basis: 100%; /* Full width for each section */
+        flex-basis: 100%; //Full width for each section
     }
 }
 
@@ -343,7 +344,7 @@ body {
 
 @media (max-width: 1024px) {
     .service {
-        flex-basis: calc(50% - 20px); /* Adjusting for a two-column layout */
+        flex-basis: calc(50% - 20px); //Adjusting for a two-column layout
     }
 }
 
@@ -354,6 +355,6 @@ body {
     }
     
     .service {
-        flex-basis: 100%; /* Full width for mobile */
+        flex-basis: 100%; //Full width for mobile
     }
 }

@@ -102,14 +102,14 @@ body {
 
 
 .service {
-    background-color: #333; /* Slightly lighter grey for the service box */
+    background-color: #333; // Slightly lighter grey for the service box
     padding: 20px;
-    border-radius: 5px; /* Rounded corners for the service box */
-    border-left: 4px solid #a4c639; /* Green accent on the side */
-    flex-basis: calc(33.333% - 20px); /* Subtracting the gap from the flex-basis */
+    border-radius: 5px; // Rounded corners for the service box
+    border-left: 4px solid #a4c639; //Green accent on the side
+    flex-basis: calc(33.333% - 20px); // Subtracting the gap from the flex-basis
 
     h2{
-        color: #a4c639; /* Green color for service titles */
+        color: #a4c639; //Green color for service titles
         margin-bottom: 15px;
 
     }
@@ -119,8 +119,8 @@ body {
         padding: 0;
         text-align: left;
         li{
-            background-color: #333; /* Darker background for list items */
-            color: #ccc; /* Light grey for list text */
+            background-color: #333; //Darker background for list items
+            color: #ccc; //Light grey for list text
             margin-bottom: 10px;
             padding: 10px;
             border-radius: 3px;
