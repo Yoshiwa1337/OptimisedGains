@@ -55,7 +55,13 @@ body {
   padding: 0;
 }
 
-#join-now-btn {
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container #join-now-btn {
   background-color: #a4c639; /* Green background for buttons */
   color: #1a1a1a; /* Dark text for contrast */
   padding: 10px 20px;
@@ -67,8 +73,8 @@ body {
   transition: background-color 0.3s ease;
   display: inline-block;
   margin-top: 20px;
+  max-width: max-content;
 }
-
-#join-now-btn:hover {
+.container #join-now-btn:hover {
   background-color: #8ebf27; /* Slightly lighter green on hover */
 }/*# sourceMappingURL=account.css.map */
