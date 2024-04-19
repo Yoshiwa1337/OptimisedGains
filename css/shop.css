@@ -114,8 +114,8 @@ body {
   height: 100%;
 }
 .gallery .recommended .row {
-  width: 400px;
-  height: 80px;
+  width: fit-content;
+  height: fit-content;
   box-shadow: 0 4px 8px rgba(122, 251, 103, 0.277);
   border-radius: 10px;
   margin: 20px;
@@ -128,9 +128,11 @@ body {
   height: 80px;
 }
 .gallery .recommended .row img {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
   position: absolute;
+  object-fit: cover;
   padding-left: 5px;
   padding-top: 10px;
 }
@@ -141,4 +143,47 @@ body {
 .gallery .recommended .row p {
   position: relative;
   padding-left: 90px;
+}
+
+@media screen and (max-width: 1725px) {
+  .gallery .recommended .row img {
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (max-width: 1585px) {
+  .gallery .shop {
+    grid-template-columns: 2fr 2fr;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .gallery .shop {
+    grid-template-columns: 2fr;
+    padding-left: 100px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .gallery {
+    grid-template-columns: 60% 40%;
+  }
+  .gallery .recommended .row {
+    font-size: 14px;
+  }
+  .gallery .recommended .row img {
+    width: 30px;
+    height: 30px;
+  }
+}
+@media screen and (max-width: 785px) {
+  .gallery {
+    grid-template-columns: 1fr;
+    justify-content: center;
+  }
+  .gallery .recommended .row {
+    font-size: 14px;
+  }
+  .gallery .recommended .row img {
+    width: 30px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=shop.css.map */

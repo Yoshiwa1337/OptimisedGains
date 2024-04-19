@@ -110,12 +110,12 @@
 
         <div class="recommended">
             <div class="rec-row1 row">
-                <div class="info">
-                    <img src="../OptimisedGains/img/view1.jpg" alt="">
-                    <h3>Article1</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ipsa.</p>
+                <!-- <div class="info"> -->
+                <img src="../OptimisedGains/img/view1.jpg" alt="">
+                <h3>Article1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse, ipsa.</p>
 
-                </div>
+                <!-- </div> -->
                 
             </div>
 
