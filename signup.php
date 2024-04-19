@@ -31,6 +31,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../OptimisedGains/css/signup.css">
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
+    <link rel="stylesheet" href="../OptimisedGains/css/footer.css">
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
@@ -128,6 +129,7 @@
             
 
     </div>
+    <?php include_once 'footer.php' ?>
     <script src="../OptimisedGains/js/signup.js"></script>
 
 

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../OptimisedGains/css/community.css">
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
+    <link rel="stylesheet" href="../OptimisedGains/css/footer.css">
     <title>Document</title>
 </head>
 <body>
@@ -32,5 +33,6 @@
     </div>
     
 
+    <?php include_once 'footer.php' ?>
 </body>
 </html>

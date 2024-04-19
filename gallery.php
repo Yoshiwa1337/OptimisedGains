@@ -6,6 +6,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../OptimisedGains/css/gallery.css">
     <link rel="stylesheet" href="../OptimisedGains/css/navbar.css">
+    <link rel="stylesheet" href="../OptimisedGains/css/footer.css">
     <script src="https://kit.fontawesome.com/4ff0141430.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
@@ -173,6 +174,8 @@
 
 
     </div>
+
+    <?php include_once 'footer.php' ?>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="../OptimisedGains/js/autocomplete.js"></script>
    
