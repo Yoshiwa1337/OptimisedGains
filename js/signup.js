@@ -32,19 +32,27 @@ document.addEventListener('DOMContentLoaded', function(){
 
     name.addEventListener('input', () => {
         validateField(name, isName(name.value.trim()), 'Cannot include numbers' );
+        const message = document.querySelector('.form-message');
+        message.textContent = '';
     });
 
     email.addEventListener('input', () => {
         validateField(email, isEmail(email.value.trim()), 'Not a valid email');
+        const message = document.querySelector('.form-message');
+        message.textContent = '';
     });
 
     password.addEventListener('input', () => {
         validateField(password, password.value.trim().length >= 8, 'Password must be at least 8 characters');
         validateField(passConfirm, passConfirm.value.trim() == password.value.trim(), 'Passwords must match');
+        const message = document.querySelector('.form-message');
+        message.textContent = '';
     });
 
     passConfirm.addEventListener('input', () => {
         validateField(passConfirm, passConfirm.value.trim() == password.value.trim(), 'Passwords must match');
+        const message = document.querySelector('.form-message');
+        message.textContent = '';
     });
 
     function checkInputs(){
@@ -67,11 +75,13 @@ document.addEventListener('DOMContentLoaded', function(){
             // form.submit();
             // console.log("nay");
             const message = document.querySelector('.form-message');
+            message.className = 'form-message error';
             message.textContent = 'Unable to submit, check username or password';
         }
         else{
             // localStorage.setItem("auth", 1);
             const message = document.querySelector('.form-message');
+            message.className = 'form-message success';
             message.textContent = 'You have successfully logged in';
             form.submit();
             // console.log("yay");

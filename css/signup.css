@@ -95,6 +95,12 @@ body {
   border-style: none;
   width: 70%;
 }
+.container .signup .error {
+  color: red;
+}
+.container .signup .success {
+  color: green;
+}
 .container .signup .form-error {
   color: red;
 }
