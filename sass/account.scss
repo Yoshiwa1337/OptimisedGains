@@ -37,4 +37,43 @@ body{
     #join-now-btn:hover {
         background-color: #8ebf27; //
     }
+
+    .box{
+        @include dimensions(350px,275px); //Dimensions for the box
+        @include flexbox(column,none);
+        box-shadow: 0 4px 8px rgba(122,251,103,0.277);
+        border-radius: 10px;
+        margin: 20px;
+        background-color: #333; //Grey background for the box
+        align-items: center;
+        color: white;
+
+        //Colour for headings in exercise boxes
+        h2{
+            color: #a4c639;
+        }
+
+        //Sizing for icons
+        .icon{
+            @include box(24px);
+            font-size: 24px;
+        }
+
+        //Video
+        video{
+            @include dimensions(300px,200px);
+            object-fit: cover;
+        }
+
+        //info/description
+        .info{
+            @include alignment(none,center,center,none,center);
+            display: grid;
+            height: 50px;
+            grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
+        }
+
+
+    }
+
 }

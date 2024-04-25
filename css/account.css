@@ -77,4 +77,40 @@ body {
 }
 .container #join-now-btn:hover {
   background-color: #8ebf27;
+}
+.container .box {
+  width: 350px;
+  height: 275px;
+  display: flex;
+  flex-direction: column;
+  justify-content: none;
+  box-shadow: 0 4px 8px rgba(122, 251, 103, 0.277);
+  border-radius: 10px;
+  margin: 20px;
+  background-color: #333;
+  align-items: center;
+  color: white;
+}
+.container .box h2 {
+  color: #a4c639;
+}
+.container .box .icon {
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+}
+.container .box video {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+.container .box .info {
+  align-content: none;
+  justify-content: center;
+  align-items: center;
+  justify-items: none;
+  text-align: center;
+  display: grid;
+  height: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr 2fr;
 }/*# sourceMappingURL=account.css.map */

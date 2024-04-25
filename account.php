@@ -73,43 +73,56 @@
             <input type="file" name="video" id="video">
             <input type="text" name="exercise" id="exercise">
             <input type="submit" name="submit" value="submit">
-    
         </form>
 
-        <table>
-            <tr>
-                <th>userid</th>
-                <th>exercise</th>
-                <th>video</th>
-            </tr>
 
-            <?php
-                
-                $sql2 = "SELECT users_id FROM `usersvids`";
-
-                $result2 = mysqli_query($conn, $sql2);
-
-                $row2 = mysqli_fetch_assoc($result2);
-
-                $sql1 = "SELECT * FROM `usersvids`";
-
-                $result1 = mysqli_query($conn, $sql1);
-
-                while($row = mysqli_fetch_assoc($result1)){
-                    $vid_name=$row['vid_name'];
-                    ?>
-                    <tr>
-                        <td> <?php echo $row['vid_id'] ?></td>
-                        <td> <?php echo $row['users_id'] ?></td>
-                        <td> <?php echo $row['vid_exercise'] ?></td>
-                        <td><video src="<?php echo $vid_name ;?>" height="200px" width="300px" controls></video></td>
-                    </tr>
-            <?php }
-            ?>
+        <!--<div class="exercise-box1 box">
+            <h2>Heading</h2>
+            <video src="../OptimisedGains/vids/y2mate.is - ATG Split Squat Progression-Gx7i66uftV4-720p-1701901818.mp4" controls></video>
+            <div class="info">
+                <i class="star-icon icon"></i>
+                <i class="star-icon icon"></i>
+                <i class="star-icon icon"></i>
+                <a href="#"><i class="save-icon icon"></i></a>
+                <p>Strength</p>
+                <p>Hypertrophy</p>
+            </div>
+        </div>-->
 
 
 
-        </table>
+        <?php
+            
+            $sql2 = "SELECT users_id FROM `usersvids`";
+
+            $result2 = mysqli_query($conn, $sql2);
+
+            $row2 = mysqli_fetch_assoc($result2);
+
+            $sql1 = "SELECT * FROM `usersvids`";
+
+            $result1 = mysqli_query($conn, $sql1);
+
+            while($row = mysqli_fetch_assoc($result1)){
+                $vid_name=$row['vid_name'];
+                ?>
+                <div class="box">
+                    <h2> <?php echo $row['vid_exercise'] ?></h2>
+                    <video src="<?php echo $vid_name ;?>" controls></video>
+                    <div class="info">
+                        <i class="star-icon icon"></i>
+                        <i class="star-icon icon"></i>
+                        <i class="star-icon icon"></i>
+                        <a href="#"><i class="save-icon icon"></i></a>
+                        <p><?php echo $row['vid_id'] ?></p>
+                        <p><?php echo $row['users_id'] ?></p>
+                    </div>
+                </div>
+        <?php }
+        ?>
+
+
+
 
     </div>
 
