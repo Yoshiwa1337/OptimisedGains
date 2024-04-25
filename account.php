@@ -27,12 +27,14 @@
         $size = $_FILES['video']['size'];
         $type = $_FILES['video']['type'];
         $exercise = $_POST['exercise'];
+        $vidType = $_POST['vidType'];
+        $vidGroup = $_POST['vidGroup'];
         $userid = $_SESSION['userid'];
 
         move_uploaded_file($temp_name,"vidsuser/".$name);
 
         $video_name = "vidsuser/".$name;
-        $sql = "INSERT INTO `usersvids`(vid_name, vid_exercise, users_id) VALUES('$video_name', '$exercise', '$userid')";
+        $sql = "INSERT INTO `usersvids`(vid_name, vid_exercise, vid_type, vid_group, users_id) VALUES('$video_name', '$exercise', '$vidType', '$vidGroup', '$userid')";
 
         $result = mysqli_query($conn, $sql);
 
@@ -69,11 +71,41 @@
         <h1 class="text-center">Welcome to the accounts page!</h1>
         <a href="../OptimisedGains/backend/logout.inc.php" class="logout" id="join-now-btn">Log out</a>
 
-        <form action="<?php $_SERVER['PHP_SELF']  ?>" method="POST" enctype="multipart/form-data">
-            <input type="file" name="video" id="video">
-            <input type="text" name="exercise" id="exercise">
-            <input type="submit" name="submit" value="submit">
-        </form>
+        <div class="upload">
+
+            <form action="<?php $_SERVER['PHP_SELF']  ?>" method="POST" enctype="multipart/form-data">
+                <div class="form-row">
+                    <input type="file" name="video" id="video">
+
+                </div>
+
+                <div class="form-row">
+
+                    <label name="exercise">Exercise name</label>
+                    <input type="text" name="exercise" id="exercise" placeholder="name of exercise">
+
+                </div>
+
+                <div class="form-row">
+
+                    <label name="vidType">Exercise type</label>
+                    <input type="text" name="vidType" id="vidType" placeholder="Type of exercise">
+
+                </div>
+
+                <div class="form-row">
+
+                    <label name="vidGroup">Muscle Group</label>
+                    <input type="text" name="vidGroup" id="vidGroup" placeholder="Muscle group">
+
+                </div>
+
+
+                <input type="submit" name="submit" value="submit">
+            </form>
+
+        </div>
+
 
 
         <!--<div class="exercise-box1 box">
@@ -114,8 +146,8 @@
                         <i class="star-icon icon"></i>
                         <i class="star-icon icon"></i>
                         <a href="#"><i class="save-icon icon"></i></a>
-                        <p><?php echo $row['vid_id'] ?></p>
-                        <p><?php echo $row['users_id'] ?></p>
+                        <p><?php echo $row['vid_type'] ?></p>
+                        <p><?php echo $row['vid_group'] ?></p>
                     </div>
                 </div>
         <?php }

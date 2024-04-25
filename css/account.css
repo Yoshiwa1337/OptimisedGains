@@ -78,6 +78,36 @@ body {
 .container #join-now-btn:hover {
   background-color: #8ebf27;
 }
+.container .upload {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: #333;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+}
+.container .upload h1 {
+  text-align: center;
+}
+.container .upload .form-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+.container .upload .form-row label {
+  width: 90px;
+  height: 40px;
+}
+.container .upload .form-row input {
+  border-radius: 5px;
+  border-style: none;
+  width: 70%;
+}
 .container .box {
   width: 350px;
   height: 275px;

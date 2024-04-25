@@ -38,6 +38,40 @@ body{
         background-color: #8ebf27; //
     }
 
+    .upload{
+        @include flexbox(column,center);
+        color: white;
+        border: 1px solid black;
+        padding: 10px;
+        background-color: #333;
+        border-radius: 10px;
+        width: 80%;
+        max-width: 600px;
+
+        h1{
+            text-align: center;
+        }
+
+        .form-row{
+            @include flexbox(row,space-around);
+            margin-bottom: 10px;
+
+
+            label{
+                width: 90px;
+                height: 40px;
+            }
+
+            input{
+                border-radius: 5px;
+                border-style: none;
+                width: 70%;
+            }
+
+        }
+    }
+
+
     .box{
         @include dimensions(350px,275px); //Dimensions for the box
         @include flexbox(column,none);
