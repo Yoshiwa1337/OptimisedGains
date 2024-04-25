@@ -38,37 +38,56 @@ body{
         background-color: #8ebf27; //
     }
 
-    .upload{
-        @include flexbox(column,center);
-        color: white;
-        border: 1px solid black;
-        padding: 10px;
-        background-color: #333;
-        border-radius: 10px;
-        width: 80%;
-        max-width: 600px;
+    .user-field{
+        @include flexbox(row,center);
+        column-gap: 150px;
 
-        h1{
-            text-align: center;
+        .upload{
+            @include flexbox(column,center);
+            color: white;
+            border: 1px solid black;
+            padding: 10px;
+            background-color: #333;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+
+            h1{
+                text-align: center;
+            }
+
+            .form-row{
+                @include flexbox(row,space-around);
+                margin-bottom: 10px;
+
+
+                label{
+                    @include dimensions(90px,40px);
+                }
+
+                input{
+                    border-radius: 5px;
+                    border-style: none;
+                    width: 70%;
+                }
+
+            }
         }
 
-        .form-row{
-            @include flexbox(row,space-around);
-            margin-bottom: 10px;
+        .user-review{
 
 
             label{
-                width: 90px;
-                height: 40px;
+                @include dimensions(90px,40px);
             }
 
-            input{
-                border-radius: 5px;
-                border-style: none;
-                width: 70%;
+            textarea{
+                @include dimensions(400px,200px);
             }
+
 
         }
+
     }
 
 
@@ -95,7 +114,7 @@ body{
 
         //Video
         video{
-            @include dimensions(300px,200px);
+            @include dimensions(100%,200px);
             object-fit: cover;
         }
 

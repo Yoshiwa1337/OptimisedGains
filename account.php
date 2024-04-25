@@ -30,6 +30,8 @@
         $vidType = $_POST['vidType'];
         $vidGroup = $_POST['vidGroup'];
         $userid = $_SESSION['userid'];
+        $reviewMsg = $_POST['review-msg'];
+
 
         move_uploaded_file($temp_name,"vidsuser/".$name);
 
@@ -71,55 +73,55 @@
         <h1 class="text-center">Welcome to the accounts page!</h1>
         <a href="../OptimisedGains/backend/logout.inc.php" class="logout" id="join-now-btn">Log out</a>
 
-        <div class="upload">
+        <div class="user-field">
 
-            <form action="<?php $_SERVER['PHP_SELF']  ?>" method="POST" enctype="multipart/form-data">
-                <div class="form-row">
-                    <input type="file" name="video" id="video">
+            <div class="upload">
 
-                </div>
+                <form action="<?php $_SERVER['PHP_SELF']  ?>" method="POST" enctype="multipart/form-data">
+                    <div class="form-row">
+                        <input type="file" name="video" id="video">
 
-                <div class="form-row">
+                    </div>
 
-                    <label name="exercise">Exercise name</label>
-                    <input type="text" name="exercise" id="exercise" placeholder="name of exercise">
+                    <div class="form-row">
 
-                </div>
+                        <label name="exercise">Exercise name</label>
+                        <input type="text" name="exercise" id="exercise" placeholder="name of exercise">
 
-                <div class="form-row">
+                    </div>
 
-                    <label name="vidType">Exercise type</label>
-                    <input type="text" name="vidType" id="vidType" placeholder="Type of exercise">
+                    <div class="form-row">
 
-                </div>
+                        <label name="vidType">Exercise type</label>
+                        <input type="text" name="vidType" id="vidType" placeholder="Type of exercise">
 
-                <div class="form-row">
+                    </div>
 
-                    <label name="vidGroup">Muscle Group</label>
-                    <input type="text" name="vidGroup" id="vidGroup" placeholder="Muscle group">
+                    <div class="form-row">
 
-                </div>
+                        <label name="vidGroup">Muscle Group</label>
+                        <input type="text" name="vidGroup" id="vidGroup" placeholder="Muscle group">
+
+                    </div>
 
 
-                <input type="submit" name="submit" value="submit">
-            </form>
+                    <input type="submit" name="submit" value="submit">
+                </form>
+
+            </div>
+
+            <div class="user-review">
+                <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                    <h2> Leave a Review here !</h2>
+                    <label>Enter review</label>
+                    <textarea type="text" name="review-msg" id="review-msg"></textarea>
+                </form>
+            </div>
 
         </div>
 
 
 
-        <!--<div class="exercise-box1 box">
-            <h2>Heading</h2>
-            <video src="../OptimisedGains/vids/y2mate.is - ATG Split Squat Progression-Gx7i66uftV4-720p-1701901818.mp4" controls></video>
-            <div class="info">
-                <i class="star-icon icon"></i>
-                <i class="star-icon icon"></i>
-                <i class="star-icon icon"></i>
-                <a href="#"><i class="save-icon icon"></i></a>
-                <p>Strength</p>
-                <p>Hypertrophy</p>
-            </div>
-        </div>-->
 
 
 
