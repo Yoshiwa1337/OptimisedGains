@@ -1,59 +1,59 @@
 <?php
-    error_reporting(0);
-    require_once 'backend/dbh.inc.php';
+error_reporting(0);
 
-    session_start();
-    
-    // $serverName="localhost";
-    // $userName="root";
-    // $password="";
-    // $dbName="project";
+require_once 'backend/dbh.inc.php';
 
-    // $conn = mysqli_connect($serverName, $userName, $password, $dbName)
+session_start();
 
-    // if(!$conn){
-    //     die("Connection failed: " . mysqli_connect_error());
-    // }
+// $serverName="localhost";
+// $userName="root";
+// $password="";
+// $dbName="project";
 
-    if(isset($_FILES['video'])){
-        if(isset($_POST['submit'])){
-            echo "<pre>";
-            print_r($_FILES['video']);
-            echo "</pre>";
-        }
+// $conn = mysqli_connect($serverName, $userName, $password, $dbName)
 
-        $name = $_FILES['video']['name'];
-        $temp_name = $_FILES['video']['tmp_name'];
-        $size = $_FILES['video']['size'];
-        $type = $_FILES['video']['type'];
-        $exercise = $_POST['exercise'];
-        $vidType = $_POST['vidType'];
-        $vidGroup = $_POST['vidGroup'];
-        $userid = $_SESSION['userid'];
-        $reviewMsg = $_POST['review-msg'];
+// if(!$conn){
+//     die("Connection failed: " . mysqli_connect_error());
+// }
 
-
-        move_uploaded_file($temp_name,"vidsuser/".$name);
-
-        $video_name = "vidsuser/".$name;
-        $sql = "INSERT INTO `usersvids`(vid_name, vid_exercise, vid_type, vid_group, users_id) VALUES('$video_name', '$exercise', '$vidType', '$vidGroup', '$userid')";
-
-        $result = mysqli_query($conn, $sql);
-
-        if($result){
-            echo "Table inserted successfully";
-        }
-        else{
-            echo "Table not inserted successfully";
-        }
+if(isset($_FILES['video'])){
+    if(isset($_POST['submit'])){
+        echo "<pre>";
+        print_r($_FILES['video']);
+        echo "</pre>";
     }
+
+    $name = $_FILES['video']['name'];
+    $temp_name = $_FILES['video']['tmp_name'];
+    $size = $_FILES['video']['size'];
+    $type = $_FILES['video']['type'];
+    $exercise = $_POST['exercise'];
+    $vidType = $_POST['vidType'];
+    $vidGroup = $_POST['vidGroup'];
+    $userid = $_SESSION['userid'];
+    $reviewMsg = $_POST['review-msg'];
+
+
+    move_uploaded_file($temp_name,"vidsuser/".$name);
+
+    $video_name = "vidsuser/".$name;
+    $sql = "INSERT INTO `usersvids`(vid_name, vid_exercise, vid_type, vid_group, users_id) VALUES('$video_name', '$exercise', '$vidType', '$vidGroup', '$userid')";
+
+    $result = mysqli_query($conn, $sql);
+
+    if($result){
+        echo "Table inserted successfully";
+    }
+    else{
+        echo "Table not inserted successfully";
+    }
+}
 
 
 
 
 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -120,22 +120,17 @@
 
         </div>
 
-
-
-
-
-
         <?php
-            
+
+
+
+
             $sql2 = "SELECT users_id FROM `usersvids`";
-
             $result2 = mysqli_query($conn, $sql2);
-
             $row2 = mysqli_fetch_assoc($result2);
-
             $sql1 = "SELECT * FROM `usersvids`";
-
             $result1 = mysqli_query($conn, $sql1);
+
 
             while($row = mysqli_fetch_assoc($result1)){
                 $vid_name=$row['vid_name'];
@@ -152,8 +147,11 @@
                         <p><?php echo $row['vid_group'] ?></p>
                     </div>
                 </div>
-        <?php }
+        <?php
+            }
         ?>
+
+
 
 
 
