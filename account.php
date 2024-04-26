@@ -17,11 +17,11 @@ session_start();
 // }
 
 if(isset($_FILES['video'])){
-    if(isset($_POST['submit'])){
-        echo "<pre>";
-        print_r($_FILES['video']);
-        echo "</pre>";
-    }
+//   if(isset($_POST['submit'])){
+//       echo "<pre>";
+//       print_r($_FILES['video']);
+//       echo "</pre>";
+//   }
 
     $name = $_FILES['video']['name'];
     $temp_name = $_FILES['video']['tmp_name'];
@@ -33,7 +33,27 @@ if(isset($_FILES['video'])){
     $userid = $_SESSION['userid'];
     $reviewMsg = $_POST['review-msg'];
 
+/*
+    $sql2 = "SELECT users_name FROM users WHERE users_id = '$userid';";
 
+    $result2 = mysqli_query($conn, $sql2);
+
+
+    if(!$result2){
+        echo "User not found";
+    }
+
+    $sql3  = "INSERT INTO `usersreview`(author, message) VALUES('$sql2', '$reviewMsg')";
+
+    $result3 = mysqli_query($conn, $sql3);
+
+    if($result3){
+        echo "Review inserted successfully";
+    }
+    else{
+        echo "Table not inserted successfully";
+    }
+*/
     move_uploaded_file($temp_name,"vidsuser/".$name);
 
     $video_name = "vidsuser/".$name;
@@ -77,7 +97,7 @@ if(isset($_FILES['video'])){
 
             <div class="upload">
 
-                <form action="<?php $_SERVER['PHP_SELF']  ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
                     <div class="form-row">
                         <input type="file" name="video" id="video">
 
@@ -115,6 +135,8 @@ if(isset($_FILES['video'])){
                     <h2> Leave a Review here !</h2>
                     <label>Enter review</label>
                     <textarea type="text" name="review-msg" id="review-msg"></textarea>
+                    <input type="submit" name="submit" value="submit">
+                </form>
                 </form>
             </div>
 
