@@ -131,7 +131,7 @@ if(isset($_FILES['video'])){
             </div>
 
             <div class="user-review">
-                <form action="<?php $_SERVER['PHP_SELF'] ?>" method="POST">
+                <form action="../OptimisedGains/backend/review.inc.php" method="POST">
                     <h2> Leave a Review here !</h2>
                     <label>Enter review</label>
                     <textarea type="text" name="review-msg" id="review-msg"></textarea>
