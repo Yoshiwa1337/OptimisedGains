@@ -1,5 +1,5 @@
 <?php
-    include '../OptimisedGains/backend/connection.php';
+    include '../OptimisedGains/backend/dbh.inc.php';
 
 ?>
 
@@ -100,7 +100,7 @@
 
         <div id="more">
             <?php 
-                $sql = "SELECT * FROM comments LIMIT 1";
+                $sql = "SELECT * FROM usersreview LIMIT 1";
                 $result = mysqli_query($conn, $sql);
                 if (mysqli_num_rows($result) > 0){
                     while ($row = mysqli_fetch_assoc($result)){
@@ -161,7 +161,7 @@
                 </ul>
             </div>
         </div>
-        <a href="../OptimisedGains/log-signup.php" class="join-now-btn">JOIN NOW!</a>
+        <a href="../OptimisedGains/signup.php" class="join-now-btn">JOIN NOW!</a>
     </div>
 
     <!-- Additional content and footer -->
