@@ -16,6 +16,15 @@ session_start();
 //     die("Connection failed: " . mysqli_connect_error());
 // }
 
+/*$sql2 = "SELECT users_name FROM `users` WHERE users_id = '$userid'";
+
+$query = mysqli_query($conn, $sql2);
+
+while($val = mysqli_fetch_assoc($query)){
+    $userName = $val['users_name'];
+}
+ */
+
 if(isset($_FILES['video'])){
 //   if(isset($_POST['submit'])){
 //       echo "<pre>";
@@ -32,6 +41,7 @@ if(isset($_FILES['video'])){
     $vidGroup = $_POST['vidGroup'];
     $userid = $_SESSION['userid'];
     $reviewMsg = $_POST['review-msg'];
+
 
 /*
     $sql2 = "SELECT users_name FROM users WHERE users_id = '$userid';";
@@ -90,7 +100,21 @@ if(isset($_FILES['video'])){
     <?php include_once 'navbar.php' ?>
 
     <div class="container">
-        <h1 class="text-center">Welcome to the accounts page!</h1>
+
+        <?php 
+
+        $userid = $_SESSION['userid'];
+        $sql2 = "SELECT users_name FROM `users` WHERE users_id = '$userid'";
+
+        $query = mysqli_query($conn, $sql2);
+
+        while($row = mysqli_fetch_assoc($query)){
+            $userName = $row['users_name'];
+        }
+
+        ?>
+
+        <h1 class="text-center">Welcome to the accounts page <?php echo $userName; ?> !</h1>
         <a href="../OptimisedGains/backend/logout.inc.php" class="logout" id="join-now-btn">Log out</a>
 
         <div class="user-field">
@@ -142,20 +166,26 @@ if(isset($_FILES['video'])){
 
         </div>
 
-        <?php
+        <div class="user-content">
+
+            <div class="user-data"></div>
+
+            <div class="user-vids">
+                <?php
 
 
 
 
-            $sql2 = "SELECT users_id FROM `usersvids`";
-            $result2 = mysqli_query($conn, $sql2);
-            $row2 = mysqli_fetch_assoc($result2);
-            $sql1 = "SELECT * FROM `usersvids`";
-            $result1 = mysqli_query($conn, $sql1);
+                $userid = $_SESSION['userid'];
+                $sql2 = "SELECT users_id FROM `usersvids`";
+                $result2 = mysqli_query($conn, $sql2);
+                $row2 = mysqli_fetch_assoc($result2);
+                $sql1 = "SELECT * FROM `usersvids` WHERE users_id = '$userid'";
+                $result1 = mysqli_query($conn, $sql1);
 
 
-            while($row = mysqli_fetch_assoc($result1)){
-                $vid_name=$row['vid_name'];
+                while($row = mysqli_fetch_assoc($result1)){
+                    $vid_name=$row['vid_name'];
                 ?>
                 <div class="box">
                     <h2> <?php echo $row['vid_exercise'] ?></h2>
@@ -169,9 +199,16 @@ if(isset($_FILES['video'])){
                         <p><?php echo $row['vid_group'] ?></p>
                     </div>
                 </div>
-        <?php
-            }
-        ?>
+                <?php
+                }
+                ?>
+
+            </div>
+
+
+
+
+        </div>
 
 
 
