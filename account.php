@@ -173,9 +173,6 @@ if(isset($_FILES['video'])){
             <div class="user-vids">
                 <?php
 
-
-
-
                 $userid = $_SESSION['userid'];
                 $sql2 = "SELECT users_id FROM `usersvids`";
                 $result2 = mysqli_query($conn, $sql2);
