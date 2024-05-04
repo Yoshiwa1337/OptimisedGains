@@ -16,6 +16,7 @@
 
         require_once 'dbh.inc.php';
         require_once 'functions.inc.php';
+        require_once 'hidden/emailapi.inc.php';
 
 
         if(uidExists($conn, $email) !== false){
@@ -29,6 +30,8 @@
         }
 
         createUser($conn, $name, $email, $password);
+
+        //sendMail($name, $email);
 
         header("location: ../login.php");
     }
