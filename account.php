@@ -101,7 +101,7 @@ if(isset($_FILES['video'])){
 
     <div class="container">
 
-        <?php 
+        <?php
 
         $userid = $_SESSION['userid'];
         $sql2 = "SELECT users_name FROM `users` WHERE users_id = '$userid'";
@@ -121,7 +121,7 @@ if(isset($_FILES['video'])){
 
             <div class="upload">
 
-                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+                <form action="<?php $_SERVER['PHP_SELF']; ?>" method="post" enctype="multipart/form-data">
                     <div class="form-row">
                         <input type="file" name="video" id="video">
 
@@ -155,7 +155,7 @@ if(isset($_FILES['video'])){
             </div>
 
             <div class="user-review">
-                <form action="../OptimisedGains/backend/review.inc.php" method="POST">
+                <form action="../OptimisedGains/backend/review.inc.php" method="post">
                     <h2> Leave a Review here !</h2>
                     <label>Enter review</label>
                     <textarea type="text" name="review-msg" id="review-msg"></textarea>
