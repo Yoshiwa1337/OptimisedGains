@@ -150,6 +150,15 @@
         }
 
 
+        // mysqli
+        /*
+        $statement = $mysqli->prepare("SELECT District FROM City WHERE Name=?");
+        $statement->execute(["Amersfoort"]);
+        $result = $statement->get_result();
+        $row = $result->fetch_assoc();
+        echo htmlentities($row['District']);
+         */
+
 
         $userId = mysqli_real_escape_string($conn, $userParams['users_id']);
 
