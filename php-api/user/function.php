@@ -86,7 +86,8 @@
 
         $query = "SELECT * FROM usersvids";
         $query_run = mysqli_query($conn, $query);
-                $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+/*        $res = mysqli_fetch_all($query_run, MYSQLI_ASSOC);
+
 
         foreach ($res as $row) {
             if (array_key_exists("users_id", $row)) {
@@ -95,6 +96,7 @@
                 echo "users_id does not exist in this row";
             }
         }
+*/
 
         if($query_run){
 

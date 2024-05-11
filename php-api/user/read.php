@@ -1,5 +1,5 @@
 <?php
-    // error_reporting(0);
+    //error_reporting(0);
     header('Access-Control-Allow-Origin:*');
     header('Content-Type: application/json');
     header('Access-Control-Allow-Method: GET');
@@ -24,8 +24,8 @@
         if($_GET['users_id']){
             $user = getUser($_GET);
             echo $user;
-            // $userList = getUserList();
-            // echo $userList;
+             //$userList = getUserList();
+             //echo $userList;
         }
         else{
             $userList = getUserList();
